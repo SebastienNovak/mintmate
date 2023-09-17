@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+  user:
+    build:
+      context: ./services/user
+    ports:
+      - 3000:3000
+    networks:
+      - mintmate-net
+
+  nft-service:
+    build:
+      context: ./services/nft-service
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+    networks:
+      - mintmate-net
+
+  payment-service:
+    build:
+      context: ./services/payment-service
+    ports:
+      - "3002:3000"
+    depends_on:
+      - db
+    networks:
+      - mintmate-net
+
+  event-service:
+    build:
+      context: ./services/event-service
+    ports:
+      - "3003:3000"
+    depends_on:
+      - db
+    networks:
+      - mintmate-net
+
+  artist-service:
+    build:
+      context: ./services/artist-service
+    ports:
+      - "3004:3000"
+    depends_on:
+      - db
+    networks:
+      - mintmate-net
+
+  wallet-service:
+    build:
+      context: ./services/wallet-service
+    ports:
+      - "3005:3000"
+    depends_on:
+      - db
+    networks:
+      - mintmate-net
+
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mintmate-net
+
+networks:
+  mintmate-net:
+    driver: bridge
+
+volumes:
+  postgres_data:

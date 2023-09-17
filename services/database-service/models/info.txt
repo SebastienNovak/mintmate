@@ -1,0 +1,111 @@
+ArtistProfile:
+
+Associated with the User model.
+biography: Text
+genre: String
+albumsReleased: Number
+websiteUrl: String
+socialMediaLinks: Object/JSON (can have fields for different platforms like Twitter, Instagram, etc.)
+profileImage: String (URL to the image)
+
+
+
+Album:
+
+Associated with the ArtistProfile and potentially the User model (if users can have albums).
+title: String
+releaseDate: Date
+coverArt: String (URL to the image)
+tracks: Array or separate Track model
+Track (if not part of the Album model):
+
+Associated with the Album and ArtistProfile models.
+title: String
+duration: Time or Number (in seconds)
+audioFile: String (URL to the audio file)
+featuredArtists: Array (if featuring other artists)
+
+
+
+Event:
+
+title: String
+description: Text
+date: Date
+location: String
+ticketPrice: Number
+artistsPerforming: Array or related through a join table
+
+
+
+Ticket:
+
+Associated with the User (who buys the ticket) and Event models.
+price: Number
+purchaseDate: Date
+seatNumber: String or Number
+
+
+
+Transaction:
+
+Associated with the User model and any model that can be purchased (NFT, Ticket, etc.)
+transactionDate: Date
+amount: Number
+type: String (purchase, sale, transfer, etc.)
+itemPurchased: Foreign Key to the item (NFT, Ticket, etc.)
+
+
+
+Wallet:
+
+Associated with the User model.
+balance: Number
+currency: String
+transactionHistory: Array or related through the Transaction model
+
+
+
+Review:
+
+Associated with the User model (reviewer) and any model that can be reviewed (NFT, ArtistProfile, Album, Track, etc.)
+rating: Number (e.g., 1 to 5)
+comment: Text
+reviewDate: Date
+
+
+
+Notification:
+
+Associated with the User model.
+content: Text
+date: Date
+type: String (e.g., "purchase", "follow", "comment")
+status: String (e.g., "read", "unread")
+
+
+
+Chat or Message:
+
+If you're considering a feature where users can communicate directly.
+sender: Foreign Key (User)
+receiver: Foreign Key (User)
+content: Text
+dateSent: Date
+
+
+
+Favorites or Bookmarks:
+
+Users might want to save or bookmark certain artists, albums, tracks, or NFTs for later.
+user: Foreign Key
+favoritedItem: Foreign Key (to the item being saved, could be polymorphic)
+
+
+
+Playlist:
+
+If users can create and manage their own playlists.
+title: String
+tracks: Array or related through a join table
+user: Foreign Key

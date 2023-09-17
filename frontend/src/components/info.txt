@@ -1,0 +1,250 @@
+** Layout Components:
+
+Navbar
+Sidebar
+Footer
+
+
+
+
+** User & Artist Components:
+
+UserProfile: Integrates data from the user, artistProfile, walletBasicInfos, and other related models.
+UserEditProfile
+ArtistDiary: Personal notes and musings of the artist.
+ArtistBlog: List of blog entries and individual blog pages.
+ArtistCollaborationRequests: Dashboard for managing collaborations.
+NotificationCenter: Displays data from notification.
+ArtistPortfolio: A comprehensive showcase of an artist's tracks, albums, collaborations, music videos, and fan experiences.
+UserPublicProfile: A view of a user's public activities like playlists, badges, reviews, etc.
+
+
+
+** Music Components:
+
+Album: Displays individual album info.
+TrackPlayer
+Playlist: List of tracks.
+SoundPacks: Browsable list of sound packs.
+VirtualStudioSessions: Details about upcoming or past sessions.
+PersonalizedRecommendations: Machine learning-driven recommendations for users based on their listening habits, purchases, and interactions.
+MoodBasedPlaylists: Dynamic playlists based on user's mood or activity, e.g., "Chill Vibes", "Workout Pump", etc.
+
+
+
+
+** Event & Experience Components:
+
+EventList: From event model.
+EventDetail: Also handles purchasing of ticket.
+VirtualVenue: Display and manage virtual event spaces.
+AlbumListeningParty: Special events for albums.
+Workshop: Details about upcoming workshops.
+EventCalendar: A visual representation of upcoming events, workshops, album listening parties, etc.
+
+
+
+
+** Interactivity Components:
+
+ChatBox: Uses the chat model.
+CommentSection: Integrates with comment.
+Voting: Allows voting on various platform aspects.
+Trivia: Mini-games or quizzes for users.
+Challenges: Display and participate in platform challenges.
+Leaderboard: Displays top users/artist based on certain criteria.
+Carousel: For sliding images or content, often used for showcasing featured albums, artists, events, etc.
+Accordion: Useful for FAQs or displaying information in a collapsible manner.
+
+
+
+
+** Economic & NFT Components:
+
+NFTGallery: Lists items from the nft model.
+NFTDetail
+Wallet: A combination of walletBasicInfos, walletLoginSecurity, walletSecurity, and walletWhitelist.
+TransactionHistory: Displays data from transaction and transactionMeta.
+MarketplaceLanding: A homepage for the marketplace with featured items, best sellers, etc.
+
+
+
+
+** Merchandise & Goods:
+
+MerchandiseList: Uses merchandise, virtualGoods, customizedMerch.
+VirtualInstrumentGallery: Browse and purchase virtual instruments.
+EquipmentRentals: List available equipment and rental processes.
+ProductPage: Detailed page for merchandise, sound packs, virtual instruments, etc.
+
+
+
+
+** Education & Learning:
+
+MusicLessons: Details about lessons and booking.
+Mentorship: Details about artists offering mentorship.
+Story: Might be narratives or success stories on the platform.
+
+
+
+
+** Community & Fan Components:
+
+FanArtGallery: View fan arts and appreciate.
+FanClub: Special section for devoted fans, with exclusive content.
+FanExperience: Might be testimonials or experiences shared by fans.
+Trending: Tracks, albums, or artists that are gaining rapid popularity.
+Forum: An area where users and artists can discuss topics, share experiences, ask questions, etc.
+AchievementsGallery: A place where users can see all possible achievements and the ones they've unlocked.
+Milestones: Track and celebrate user and artist milestones on the platform.
+
+
+
+
+** Other Components:
+
+LoadingSpinner
+ErrorBoundary
+Modal
+BadgeDisplay: Show the badges a user/artist has earned.
+CollaborationCard: A UI card to showcase a collaboration request or ongoing collaboration.
+ReviewCard: Display user reviews for albums, events, or merchandise.
+RefundRequest: A component for users to request refunds, if applicable.
+
+
+
+
+** Authentication & Authorization Components:
+
+Login
+Register
+ForgotPassword
+ResetPassword
+EmailVerification
+TwoFactorAuthentication
+
+
+
+
+** Onboarding Components:
+
+UserOnboarding: A series of steps/screens to introduce a new user to the platform.
+ArtistOnboarding: Onboarding specifically designed for artists, introducing features and benefits.
+
+
+
+
+** Social Components:
+
+FollowButton: To follow artists or other users.
+ShareButton: To share albums, tracks, events, etc., on social media.
+ReactionButton: Like, dislike, heart, etc.
+
+
+
+
+** Feedback and Support:
+
+FeedbackForm
+SupportChat: Could be a live chat for users seeking immediate help.
+FAQ: Frequently asked questions.
+
+
+
+
+** Payment Components:
+
+PaymentGateway: Integrating third-party payment solutions like Stripe, PayPal, etc.
+SubscriptionManagement: For handling user or artist subscriptions, upgrading, downgrading, etc.
+BillingHistory: List of all billing transactions.
+Checkout: For finalizing purchases, viewing the cart, and payment.
+
+
+
+
+** Settings & Configuration:
+
+UserSettings: Personalization, privacy, notifications, etc.
+SecuritySettings: Update password, 2FA settings, etc.
+AccessibilitySettings: Adjustments for color contrast, font size, or even integration with screen readers to make the platform friendly for users with disabilities.
+
+
+
+
+** Media Components:
+
+ImageUploader: For profile pictures, album covers, fan arts, etc.
+AudioUploader: For tracks, sound packs, etc.
+VideoPlayer: For music videos, behind the scenes, etc.
+
+
+
+
+** Analytics:
+
+UserDashboard: Display analytics related to a user's activities, favorites, spendings, etc.
+ArtistDashboard: Insights about track plays, album sales, tickets sold, fan demographics, etc.
+
+
+
+
+** Notifications:
+
+NotificationDropdown: A dropdown in the navbar or sidebar to quickly view the latest notifications.
+
+
+
+
+** Search & Discover:
+
+SearchBar
+SearchResults: Display results when a user searches.
+DiscoveryFeed: A feed of recommended tracks, albums, artists, etc.
+
+
+
+
+** Responsive Components:
+
+MobileNavbar: A navigation bar specifically designed for mobile viewports.
+TabletSidebar: A sidebar adjusted for tablet devices.
+
+
+
+
+** Utility:
+
+Pagination: For navigating long lists.
+Breadcrumbs: Indicates the current page's location within a navigational hierarchy.
+Tooltips: Provide additional information when hovering over an element.
+
+
+
+** Learning & Resources:
+
+TutorialCenter: A place for newcomers to understand how to use the platform, or for artists to learn best practices.
+ResourceLibrary: A collection of articles, guidelines, and helpful resources.
+
+
+
+
+** Collaboration & Networking:
+
+CollaborationBoard: A bulletin-style board where collaboration requests can be posted and browsed.
+NetworkingHub: A feature for artists and industry professionals to connect, similar to a professional networking platform but tailored to your platform's context.
+
+
+
+
+** Safety & Moderation:
+
+Report: Allows users to report inappropriate content or behavior.
+ModerationQueue: If you plan to have community moderators, this component would be a place for them to review and act on reported items.
+
+
+
+
+** Localization:
+LanguageSwitcher: Allows users to change the platform's language.
+RegionSpecificContent: Tailored content or special promotions/events based on the user's region.

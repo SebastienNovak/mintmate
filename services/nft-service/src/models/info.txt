@@ -1,0 +1,113 @@
+metadata: A JSON object containing detailed information about the NFT (it could be about the artist, creation date, or any other special information).
+
+imageURL: Where the actual media for the NFT is stored. This is critical since many NFTs represent digital artwork.
+
+artistId: A reference to the artist who minted/created the NFT. It will be useful if you have a separate artist model or service.
+
+currentOwner: Who currently holds the NFT.
+
+mintDate: When the NFT was created.
+
+lastTransferDate: The last time the ownership of the NFT changed.
+
+price: The current asking price or last sold price.
+
+isForSale: Indicates if the NFT is currently up for sale.
+
+thumbnailURL: low-res image of the NFT for quicker loading in lists.
+
+videoURL: can be used if the NFT is a video or has an accompanying video description.
+
+previousOwner: can be a reference to the past owner. This can be updated every time the NFT changes hands.
+
+editionNumber and totalEditions: for limited edition NFTs, where there might be e.g., 100 copies of a particular artwork.
+
+tags and genre: for search and categorization.
+
+contractAddress and tokenID help in identifying the NFT in its actual contract on the Ethereum blockchain.
+
+EventId: If the NFT is tied to a specific artist's event or performance.
+
+LimitedAccessLink: If owning the NFT provides special access to content (like a livestream or exclusive content), this could be a link or code.
+
+AudioURL: For musical artists, they might attach a specific audio clip or full song.
+
+IsTransferable: A boolean indicating if the NFT can be transferred/sold to others.
+
+ExpirationDate: Some NFTs might provide access to content or services that expire.
+
+Redeemed: If the NFT can be redeemed for physical goods or experiences, a boolean to check if it has been redeemed.
+
+RedemptionInstructions: A text field explaining how one might redeem the NFT for goods/services/experiences.
+
+OriginalPrice: The price at which the NFT was originally listed or sold at, useful for gauging market value changes.
+
+RoyaltyPercentage: If there are royalties to be paid out to artists or original creators upon resale.
+
+UnlockableContent: A link or code that gets revealed only to the owner of the NFT.
+
+IsVerified: A boolean indicating if the NFT has been verified, especially useful for platforms that want to ensure authenticity.
+
+Platform: The platform or marketplace where the NFT was originally minted or is primarily traded. For example: "OpenSea", "Rarible", "Foundation", etc.
+
+PhysicalRepresentation: A boolean indicating if the NFT has a tangible, physical counterpart. For some art pieces, there might be a real-world representation of the NFT.
+
+Location: If there's a physical counterpart or if the NFT represents ownership of real estate in a virtual world, you might need coordinates or an address.
+
+Collaborators: An array or JSON field that contains the Ethereum addresses or user IDs of collaborators or co-creators.
+
+ResaleCount: An integer counting the number of times the NFT has been resold. This can be useful for tracking the provenance of the piece.
+
+VerifiedHistory: A JSON field or array that contains a log of verifications or authentications. This can be a list of events, dates, and entities that have verified the NFT's authenticity.
+
+AdditionalLinks: An array of links that provide more context or additional content related to the NFT. This could be artist interviews, making-of videos, etc.
+
+SpecialAttributes: A JSON field that contains special characteristics or properties. This could be color rarity for collectibles, stats for game-based NFTs, etc.
+
+Chain: Since NFTs can exist on various blockchains other than Ethereum (e.g., Flow, Binance Smart Chain, Polygon, etc.), this could indicate where the NFT primarily resides.
+
+EmbedCode: For multimedia NFTs that can be embedded elsewhere (like a SoundCloud track or a YouTube video).
+
+History: A JSONB field that captures a log of important events related to the NFT (e.g., exhibitions, awards, major trades, etc.).
+
+PopularityScore: Could be an integer or float that's updated based on user interactions, views, likes, etc. Useful for sorting or recommendations.
+
+HiddenMetadata: Some metadata may be private until, for instance, the NFT is purchased or certain conditions are met.
+
+ExternalURL: A direct link to the primary listing or main page for the NFT on its main platform.
+
+AttributesRarity: JSONB or array that defines the rarity of certain attributes, useful for NFTs that are part of collectible sets.
+
+LicenseType: Defines the license under which the NFT content can be used (e.g., Creative Commons, All Rights Reserved, etc.).
+
+InteractivityType: Describes how users can interact with the NFT, especially for multimedia or VR content (e.g., "3D model", "VR environment", "interactive game").
+
+Categories: Similar to tags, but more structured. Might represent higher-level classifications while tags might be more granular.
+
+Language: For NFTs that are books, articles, music with lyrics, etc.
+
+Dimensions: If the NFT represents a physical item or artwork, its dimensions might be relevant.
+
+Weight: Again, if representing a physical item.
+
+Frame: Information about the frame for physical artwork or any kind of display casing.
+
+Signatures: Details about the signatures on an artwork or item.
+
+CertificateOfAuthenticity: Does the item come with a certificate of authenticity?
+
+ViewCount: Count of how many times the NFT page or info has been viewed.
+
+Likes: For platforms that allow liking or favoriting NFTs.
+
+CommentsCount: If your platform has a feature to comment on NFTs, tracking the count might be useful.
+
+RelatedNFTs: If you'd like to recommend similar NFTs on an NFT's page.
+
+ParentNFT: In case an NFT is derived from or related to another NFT.
+
+AccessRestrictions: If the NFT has any kind of restrictions on who can view/buy it.
+
+Utility: If the NFT has a specific use-case (like a ticket, membership, etc.).
+
+IsBurnable: Whether or not the NFT can be destroyed/burned.
