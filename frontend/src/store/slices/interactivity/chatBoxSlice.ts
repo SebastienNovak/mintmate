@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Message = {
+export type Message = {
     id: string;
     text: string;
     timestamp: Date;

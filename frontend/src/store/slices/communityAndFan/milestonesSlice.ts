@@ -2,9 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type MilestoneStatus = 'planned' | 'in-progress' | 'completed';
+export type MilestoneStatus = 'planned' | 'in-progress' | 'completed';
 
-type Milestone = {
+export type Milestone = {
     id: string;
     projectId: string;
     title: string;

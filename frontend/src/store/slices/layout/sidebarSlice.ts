@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type NavLink = {
+export type NavLink = {
     id: string;
     title: string;
     url: string;
     icon?: string;
 };
 
-type NavSection = {
+export type NavSection = {
     id: string;
     title: string;
     links: NavLink[];

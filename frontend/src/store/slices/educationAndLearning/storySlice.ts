@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
-type Story = {
+export type Story = {
     id: string;
     userId: string;  // ID of the user who posted the story
     content: string; // This could be a URL to an image, video, or just a text message

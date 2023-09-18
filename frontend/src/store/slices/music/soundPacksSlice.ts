@@ -10,7 +10,7 @@ type Sound = {
     // ... other sound details
 };
 
-type SoundPack = {
+export type SoundPack = {
     id: number;
     title: string;
     description: string;

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
 
-type Transaction = {
+export type Transaction = {
     id: string;
     timestamp: Date;
     type: 'purchase' | 'sale' | 'transfer' | 'receive';

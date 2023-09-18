@@ -10,7 +10,7 @@ type Song = {
     // ... other song details
 };
 
-type Playlist = {
+export type Playlist = {
     id: number;
     name: string;
     description: string;

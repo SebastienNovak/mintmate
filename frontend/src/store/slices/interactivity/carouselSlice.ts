@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type CarouselItem = {
+export type CarouselItem = {
     id: string;
     contentUrl: string;
     description?: string;

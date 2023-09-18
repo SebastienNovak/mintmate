@@ -10,7 +10,7 @@ type Song = {
     // ... other song details
 };
 
-type Playlist = {
+export type Playlist = {
     mood: string;  // e.g., "Happy", "Sad", etc.
     songs: Song[];
 };

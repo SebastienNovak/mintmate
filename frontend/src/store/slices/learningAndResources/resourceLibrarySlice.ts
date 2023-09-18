@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type ResourceType = 'article' | 'video' | 'pdf' | 'tutorial'; // extend as needed
 
-type Resource = {
+export type Resource = {
     id: string;
     title: string;
     description: string;

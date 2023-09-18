@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
 
-type Achievement = {
+export type Achievement = {
     id: string;
     title: string;
     description: string;

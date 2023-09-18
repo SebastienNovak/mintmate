@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Track = {
+export type Track = {
     id: number;
     title: string;
     artist: string;
@@ -8,7 +8,7 @@ type Track = {
     fileUrl: string;
 };
 
-type VirtualStudioSession = {
+export type VirtualStudioSession = {
     sessionId: number;
     sessionName: string;
     creator: string;

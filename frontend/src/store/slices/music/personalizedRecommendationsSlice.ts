@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types
 
-type Song = {
+export type Song = {
     id: number;
     title: string;
     artist: string;

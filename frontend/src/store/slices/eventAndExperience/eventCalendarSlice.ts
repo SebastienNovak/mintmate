@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types
 
-type Event = {
+export type Event = {
     id: string;
     title: string;
     description?: string;

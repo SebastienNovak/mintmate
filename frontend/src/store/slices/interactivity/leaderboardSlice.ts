@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types
-type UserScore = {
+export type UserScore = {
     userId: string;
     username: string;
     score: number;

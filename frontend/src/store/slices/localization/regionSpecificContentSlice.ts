@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Region = 'US' | 'EU' | 'ASIA' | 'AFRICA';  // Extend this list as needed
+export type Region = 'US' | 'EU' | 'ASIA' | 'AFRICA';  // Extend this list as needed
 
-type Content = {
+export type Content = {
     title: string;
     description: string;
     imageUrl?: string;

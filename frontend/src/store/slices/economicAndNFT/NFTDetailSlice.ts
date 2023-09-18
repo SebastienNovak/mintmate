@@ -8,7 +8,7 @@ type Owner = {
     avatarUrl: string;
 };
 
-type NFTDetail = {
+export type NFTDetail = {
     id: string;
     title: string;
     imageUrl: string;

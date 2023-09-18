@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Link = {
+export type Link = {
     id: string;
     title: string;
     url: string;

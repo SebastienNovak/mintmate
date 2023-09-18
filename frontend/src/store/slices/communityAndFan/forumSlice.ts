@@ -2,14 +2,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type Topic = {
+export type Topic = {
     id: string;
     title: string;
     description: string;
     postCount: number;
 };
 
-type Post = {
+export type Post = {
     id: string;
     topicId: string;
     userId: string;

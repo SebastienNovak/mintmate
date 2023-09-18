@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type AccordionItem = {
+export type AccordionItem = {
     id: string;
     title: string;
     content: string;

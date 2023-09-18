@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type TrendingContent = {
+export type TrendingContent = {
     id: string;
     title: string;
     author: string;

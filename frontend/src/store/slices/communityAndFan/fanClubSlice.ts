@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type Member = {
+export type Member = {
     id: string;
     name: string;
     joinDate: string;  // ISO date string representing when the member joined.

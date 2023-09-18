@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
 
-type FanArt = {
+export type FanArt = {
     id: string;
     title: string;
     artistName: string;

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Challenge = {
+export type Challenge = {
     id: string;
     title: string;
     description: string;

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
 
-type Asset = {
+export type Asset = {
     id: string;
     type: 'cryptocurrency' | 'nft'; 
     name: string; 

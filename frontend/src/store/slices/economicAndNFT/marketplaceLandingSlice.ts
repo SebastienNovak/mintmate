@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types:
 
-type Product = {
+export type Product = {
     id: string;
     name: string;
     price: number;
@@ -11,12 +11,12 @@ type Product = {
     category: string;
 };
 
-type Category = {
+export type Category = {
     id: string;
     name: string;
 };
 
-type Review = {
+export type Review = {
     id: string;
     productId: string;
     reviewerName: string;

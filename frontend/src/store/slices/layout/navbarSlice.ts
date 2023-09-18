@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Link = {
+export type Link = {
     id: string;
     title: string;
     url: string;
     roles: string[];  // User roles that can view this link.
 };
 
-type User = {
+export type User = {
     id: string;
     name: string;
     avatarUrl?: string;

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type Experience = {
+export type Experience = {
     id: string;
     title: string;
     description: string;

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Language = 'en' | 'es' | 'fr' | 'de'; // English, Spanish, French, German (extend as needed)
+export type Language = 'en' | 'es' | 'fr' | 'de'; // English, Spanish, French, German (extend as needed)
 
 type LanguageSwitcherState = {
     currentLanguage: Language;

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Types:
 
-type CollaborationPost = {
+export type CollaborationPost = {
     id: string;
     title: string;
     description: string;

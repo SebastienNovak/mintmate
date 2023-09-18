@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types
-type Message = {
+export type SupportChatMessage = {
     id: string;
     sender: 'user' | 'support';
     text: string;
@@ -9,7 +9,7 @@ type Message = {
 };
 
 type SupportChatState = {
-    messages: Message[];
+    messages: SupportChatMessage[];
     isConnected: boolean;
     isTyping: boolean;
     lastReadMessageId: string | null;
@@ -26,7 +26,7 @@ const supportChatSlice = createSlice({
     name: 'supportChat',
     initialState,
     reducers: {
-        addMessage: (state, action: PayloadAction<Message>) => {
+        addMessage: (state, action: PayloadAction<SupportChatMessage>) => {
             state.messages.push(action.payload);
         },
         setConnected: (state, action: PayloadAction<boolean>) => {

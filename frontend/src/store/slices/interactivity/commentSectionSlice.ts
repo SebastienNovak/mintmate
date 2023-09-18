@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types
-type Reply = {
+export type Reply = {
     id: string;
     text: string;
     timestamp: Date;
     author: string;
 };
 
-type Comment = {
+export type Comment = {
     id: string;
     text: string;
     timestamp: Date;

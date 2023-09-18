@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define types
-type Track = {
+export type Track = {
     id: number;
     title: string;
     duration: number; // Duration in seconds
+    artist?: string; // The '?' makes it optional, remove if you want it mandatory
+    fileUrl?: string; // The '?' makes it optional, remove if you want it mandatory
 };
 
 type PartyMember = {

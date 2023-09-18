@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type TutorialType = 'video' | 'article' | 'code-sample' | 'interactive'; 
 
-type Tutorial = {
+export type Tutorial = {
     id: string;
     title: string;
     description: string;
