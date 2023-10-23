@@ -1,0 +1,23 @@
+type Trivia {
+    id: ID!
+    question: String!
+    options: [String!]!
+    correctOption: Int!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateTriviaInput {
+    question: String!
+    options: [String!]!
+    correctOption: Int!
+}
+
+extend type Query {
+    trivia(id: ID!): Trivia
+    trivias: [Trivia!]!
+}
+
+extend type Mutation {
+    createTrivia(input: CreateTriviaInput!): Trivia!
+}

@@ -1,0 +1,20 @@
+type Refund {
+    id: ID!
+    refundStatus: RefundStatus!
+    refundAmount: Float
+    transaction: Transaction!
+    createdAt: String!
+    updatedAt: String!
+}
+
+enum RefundStatus {
+    NOT_REQUESTED
+    PENDING
+    COMPLETED
+    DENIED
+}
+
+extend type Query {
+    refund(id: ID!): Refund
+    refunds(transactionId: ID!): [Refund!]!
+}

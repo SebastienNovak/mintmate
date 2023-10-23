@@ -1,0 +1,63 @@
+@import '../../../App.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-text;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    button {
+        background-color: $mint-green;
+        color: white;
+        &:hover {
+            background-color: darken($mint-green, 10%);
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-left: 20px;
+
+            a {
+                text-decoration: none;
+                color: white;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $mint-green;
+                }
+            }
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        input[type="text"] {
+            margin-right: 20px;
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: 2px solid $light-text;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    nav button {
+        display: none;
+    }
+}

@@ -1,0 +1,140 @@
+// "Minty Fresh" Color Palette
+$mint-green: #3eb489;
+$mint-light: #7ce5a6;
+$mint-dark: #006D5B;
+$ice-blue: #E6FFFA;
+$darker-ice-blue: #11b0a8;
+$contrast-white: #FFFFFF;
+$soft-gray: #505050;
+$dark-text: #1A1A1A;
+$light-text: #7D7D7D;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: $darker-ice-blue;
+    line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  width: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  // padding: 30px 20px 80px;
+  // padding-top: 55px;
+  padding: 60px 30px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: $darker-ice-blue;  // Using the darker shade for better contrast
+}
+
+.hero {
+    background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-vibrant-image.jpg');
+    background-size: cover;
+    // padding: 100px 0;
+    padding: 150px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $contrast-white;
+        margin-bottom: 20px;
+        &.aos-animate {
+          animation-name: fade-up;
+          animation-delay: 100ms;
+      }
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: $contrast-white;
+        margin-bottom: 40px;
+        &.aos-animate {
+          animation-name: fade-up;
+          animation-delay: 300ms;
+      }
+    }
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    // transform: translateY(-3px);
+  }
+
+  &.signup-button {
+      background-color: $mint-green;
+      color: $contrast-white;
+      margin-right: 10px;
+  }
+
+  &.login-button {
+      background-color: $contrast-white;
+      color: $mint-dark;
+      border: 2px solid $mint-dark;
+  }
+}
+
+section {
+    padding: 30px 0;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: $contrast-white;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+// Mobile first
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.discovery-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // This will make items within DiscoveryFeed display next to each other and wrap as needed
+  gap: 15px;
+}
+

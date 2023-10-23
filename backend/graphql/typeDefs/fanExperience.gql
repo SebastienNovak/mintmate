@@ -1,0 +1,40 @@
+type FanExperience {
+    id: ID!
+    title: String
+    description: String
+    price: Float
+    date: String
+    location: String
+    virtualLink: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    fanExperience(id: ID!): FanExperience
+    fanExperiences: [FanExperience!]!
+}
+
+input CreateFanExperienceInput {
+    title: String
+    description: String
+    price: Float
+    date: String
+    location: String
+    virtualLink: String
+}
+
+input UpdateFanExperienceInput {
+    title: String
+    description: String
+    price: Float
+    date: String
+    location: String
+    virtualLink: String
+}
+
+extend type Mutation {
+    createFanExperience(input: CreateFanExperienceInput!): FanExperience!
+    updateFanExperience(id: ID!, input: UpdateFanExperienceInput!): FanExperience!
+    deleteFanExperience(id: ID!): FanExperience!
+}

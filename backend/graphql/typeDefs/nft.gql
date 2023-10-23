@@ -1,0 +1,46 @@
+type NFT {
+  id: ID!
+  title: String!
+  description: String
+  imageUrl: String
+  metadataUrl: String
+  edition: String
+  totalEditions: Int
+  isForSale: Boolean!
+  price: Float
+  dateMinted: String
+  dateListed: String
+  tags: [String]
+  category: String
+  tokenID: String
+  blockchainType: String
+  contractAddress: String
+  attributes: JSON
+  isVisible: Boolean!
+  fileType: String
+  audioUrl: String
+  videoPreviewUrl: String
+  licenseType: String
+  hasPhysicalRedemption: Boolean
+  physicalRedemptionDetails: String
+  isOnAuction: Boolean
+  auctionStartTime: String
+  auctionEndTime: String
+  startingBid: Float
+  highestBid: Float
+  highestBidderId: Int
+  isVerified: Boolean
+  reservePrice: Float
+  unlockableContentUrl: String
+  user: User
+  createdAt: String!
+  updatedAt: String!
+  comments: [Comment]
+}
+
+type Query {
+  nft(id: ID!): NFT
+  nfts: [NFT]!
+}
+
+scalar JSON

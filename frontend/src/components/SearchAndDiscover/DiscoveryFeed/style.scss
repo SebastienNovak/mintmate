@@ -1,0 +1,88 @@
+@import "../../../variables";
+
+.discovery-feed-wrapper {
+    padding: 20px; // Add some general padding around the wrapper
+
+    .filter-sort-controls {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        select {
+            padding: 10px;
+            border: 1px solid $soft-gray;
+            border-radius: 5px;
+        }
+    }
+
+    .discovery-feed {
+
+        .content-item {
+            border-radius: 10px;
+            margin: 0 10px;
+            background-color: $ice-blue;
+            position: relative;
+
+            a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: darken($ice-blue, 5%);
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: $mint-dark;
+
+                a:hover {
+                    background-color: darken($peach-pink, 5%);
+                }
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+
+            h3, p, span {
+                margin: 10px 0;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                color: $dark-text;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $light-text;
+            }
+
+            span {
+                font-size: 0.9rem;
+                color: $soft-gray;
+            }
+
+            .action-btn {
+                display: none; // initially hidden
+
+                &:hover {
+                    display: block;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            // bottom: -10px; // Adjust as necessary to position the bullets below the Swiper
+        }
+
+        .swiper {
+            width: 100%;
+            height: 220px;
+        }
+    }
+}

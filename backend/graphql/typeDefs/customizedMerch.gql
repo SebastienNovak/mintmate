@@ -1,0 +1,15 @@
+type CustomizedMerch {
+    id: ID!
+    userId: ID!
+    user: User!
+    merchId: ID!
+    merchandise: Merchandise!
+    customizations: JSON
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    customizedMerch(id: ID!): CustomizedMerch
+    allCustomizedMerches: [CustomizedMerch]
+}

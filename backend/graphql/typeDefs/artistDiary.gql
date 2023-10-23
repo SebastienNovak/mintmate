@@ -1,0 +1,13 @@
+type ArtistDiary {
+    id: ID!
+    date: String!
+    entry: String!
+    artist: ArtistProfile!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    artistDiary(id: ID!): ArtistDiary
+    artistDiaries: [ArtistDiary]
+}

@@ -1,0 +1,11 @@
+type Merchandise {
+    id: ID!
+    name: String!
+    description: String
+    price: Float!
+    imageUrl: String
+    artist: ArtistProfile
+    createdAt: String!
+    updatedAt: String!
+    customizedMerches: [CustomizedMerch]
+}

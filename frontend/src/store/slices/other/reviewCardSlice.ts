@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Review = {
+export type Review = {
     id: string;
     userId: string;
     reviewText: string;
@@ -8,7 +8,7 @@ type Review = {
     date: Date;
 };
 
-type ReviewState = Review[];
+export type ReviewState = Review[];
 
 const initialState: ReviewState = [];
 

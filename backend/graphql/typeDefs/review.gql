@@ -1,0 +1,22 @@
+type Review {
+    id: ID!
+    content: String
+    rating: Int
+    type: ReviewType!
+    user: User!
+    track: Track
+    album: Album
+    createdAt: String!
+    updatedAt: String!
+}
+
+enum ReviewType {
+    ALBUM
+    TRACK
+    ARTIST
+}
+
+extend type Query {
+    review(id: ID!): Review
+    reviews(type: ReviewType, userId: ID, trackId: ID, albumId: ID): [Review!]!
+}

@@ -1,0 +1,23 @@
+type Query {
+    badge(id: ID!): Badge
+    badges: [Badge]
+}
+
+type User {
+    id: ID!
+}
+
+type Badge {
+    id: ID!
+    user: User!
+    name: String
+    description: String
+    type: BadgeType!
+    createdAt: String!
+    updatedAt: String!
+}
+
+enum BadgeType {
+    top_seller
+    super_fan
+}

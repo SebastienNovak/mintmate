@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: auto;
+    font-size: 0.9rem;
+    
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .links-container {
+            flex: 1;  // This will make it occupy all available space
+            display: flex;
+            align-items: center;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: flex-start;
+                margin: 0;
+
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .trademark-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            button {
+                background-color: #555;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 5px;
+
+                &:hover {
+                    background-color: #444;
+                }
+            }
+
+            p {
+                margin-top: 5px;
+            }
+        }
+    }
+}

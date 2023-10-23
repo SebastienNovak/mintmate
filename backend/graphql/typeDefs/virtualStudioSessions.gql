@@ -1,0 +1,25 @@
+type VirtualStudioSession {
+    id: ID!
+    artist: User!
+    date: String!
+    duration: Int!
+    virtualLink: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateVirtualStudioSessionInput {
+    artistId: ID!
+    date: String!
+    duration: Int!
+    virtualLink: String
+}
+
+extend type Query {
+    virtualStudioSession(id: ID!): VirtualStudioSession
+    virtualStudioSessions: [VirtualStudioSession!]!
+}
+
+extend type Mutation {
+    createVirtualStudioSession(input: CreateVirtualStudioSessionInput!): VirtualStudioSession!
+}

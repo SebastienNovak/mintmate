@@ -1,0 +1,18 @@
+type Event {
+    id: ID!
+    name: String!
+    description: String
+    date: String
+    location: String
+    ticketPrice: Float
+    imageUrl: String
+    artist: ArtistProfile
+    createdAt: String!
+    updatedAt: String!
+    comments: [Comment]
+}
+
+type Query {
+    event(id: ID!): Event
+    events: [Event]
+}

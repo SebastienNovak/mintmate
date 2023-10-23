@@ -1,0 +1,22 @@
+type Dispute {
+    id: ID!
+    disputeStatus: DisputeStatus!
+    disputeDetails: String
+    resolvedOn: String
+    resolutionDetails: String
+    transactionId: ID!
+    transaction: Transaction!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    dispute(id: ID!): Dispute
+    allDisputes: [Dispute!]!
+}
+
+enum DisputeStatus {
+    RAISED
+    RESOLVED
+    PENDING
+}

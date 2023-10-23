@@ -1,0 +1,25 @@
+type WalletWhitelist {
+    id: ID!
+    whitelistAddresses: [String!]
+    ipWhitelist: [String!]
+    userAgentWhitelist: [String!]
+    wallet: WalletBasicInfo!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateWalletWhitelistInput {
+    whitelistAddresses: [String!]
+    ipWhitelist: [String!]
+    userAgentWhitelist: [String!]
+    walletId: ID!
+}
+
+extend type Query {
+    walletWhitelist(id: ID!): WalletWhitelist
+    walletWhitelists: [WalletWhitelist!]!
+}
+
+extend type Mutation {
+    createWalletWhitelist(input: CreateWalletWhitelistInput!): WalletWhitelist!
+}

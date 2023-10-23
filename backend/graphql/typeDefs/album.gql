@@ -1,0 +1,18 @@
+type Album {
+  id: ID!
+  title: String!
+  releaseDate: String
+  coverArt: String
+  genres: [Genre] 
+  user: ArtistProfile
+  createdAt: String!
+  updatedAt: String!
+  listeningParties: [AlbumListeningParty!]!
+  collaborations: [Collaboration]
+  comments: [Comment]
+}
+
+type Query {
+  album(id: ID!): Album
+  # ... other fields
+}

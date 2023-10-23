@@ -1,0 +1,14 @@
+type MusicVideo {
+    id: ID!
+    title: String!
+    description: String
+    videoUrl: String!
+    releaseDate: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    musicVideo(id: ID!): MusicVideo
+    musicVideos: [MusicVideo!]!
+}

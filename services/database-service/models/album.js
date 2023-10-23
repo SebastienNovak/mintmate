@@ -1,4 +1,4 @@
-const album = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     const Album = sequelize.define('Album', {
         title: {
             type: DataTypes.STRING,

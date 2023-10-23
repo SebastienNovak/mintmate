@@ -1,0 +1,20 @@
+type Comment {
+    id: ID!
+    content: String!
+    type: String!
+    userId: ID!
+    user: User!
+    nftId: ID
+    nft: NFT
+    albumId: ID
+    album: Album
+    eventId: ID
+    event: Event
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    comment(id: ID!): Comment
+    allComments: [Comment]
+}

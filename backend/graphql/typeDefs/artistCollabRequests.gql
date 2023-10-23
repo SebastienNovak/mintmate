@@ -1,0 +1,14 @@
+type ArtistCollabRequest {
+    id: ID!
+    artist: ArtistProfile!
+    description: String!
+    isOpen: Boolean!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+  artistCollabRequest(id: ID!): ArtistCollabRequest
+  artistCollabRequests: [ArtistCollabRequest]
+  # ... other queries ...
+}

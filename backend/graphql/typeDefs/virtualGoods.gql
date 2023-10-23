@@ -1,0 +1,34 @@
+type VirtualGood {
+    id: ID!
+    name: String!
+    description: String
+    price: Float!
+    type: VirtualGoodType!
+    createdAt: String!
+    updatedAt: String!
+}
+extend type Query {
+    virtualGood(id: ID!): VirtualGood
+    virtualGoods: [VirtualGood!]!
+}
+
+enum VirtualGoodType {
+    AVATAR_OUTFIT
+    CONCERT_PROP
+}
+
+input CreateVirtualGoodInput {
+    name: String!
+    description: String
+    price: Float!
+    type: VirtualGoodType!
+}
+
+extend type Query {
+    virtualGood(id: ID!): VirtualGood
+    virtualGoods: [VirtualGood!]!
+}
+
+extend type Mutation {
+    createVirtualGood(input: CreateVirtualGoodInput!): VirtualGood!
+}

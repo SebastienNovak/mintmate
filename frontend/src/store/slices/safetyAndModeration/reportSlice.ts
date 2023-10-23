@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit';
 
 // Types
 type ReportItem = {
@@ -63,18 +63,23 @@ export const {
 } = reportSlice.actions;
 
 // Thunks
-/*
-export const fetchReports = () => async (dispatch: any) => {
+// Thunks
+export const fetchReports = () => async (dispatch: Dispatch) => {
     dispatch(startFetchingReports());
     try {
-        // Simulating an API call
-        const response = await simulatedAPI.fetchReports();
-        dispatch(setReports(response.data));
+        const response = await fetch('/api/reports');
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch reports');
+        }
+
+        const data = await response.json();
+        dispatch(setReports(data));
     } catch (error) {
         dispatch(setError('An error occurred while fetching the reports.'));
     }
 };
-*/
+
 
 // Selectors
 type RootState = {

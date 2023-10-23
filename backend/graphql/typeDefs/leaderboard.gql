@@ -1,0 +1,16 @@
+type Leaderboard {
+    id: ID!
+    user: ArtistProfile!
+    nftSales: Int!
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type ArtistProfile {
+    leaderboard: Leaderboard
+}
+
+extend type Query {
+    leaderboard(userId: ID!): Leaderboard
+    leaderboards: [Leaderboard!]!
+}

@@ -1,0 +1,22 @@
+
+typeDefs/: All the GraphQL type definitions (schema) are split into multiple files based on their domain. An index.js in this directory is responsible for merging and exporting all the type definitions. Tools like graphql-tools can help in merging multiple type definition files.
+
+resolvers/: This is where all resolver functions reside. They are split into multiple files based on their domain (e.g., user, workshop, etc.). The index.js in this directory will be responsible for merging and exporting all resolvers. Again, tools like graphql-tools can help with this.
+
+index.js: It's optional but can be handy. This file can serve as the main entry point for everything related to GraphQL in your backend. It can import and further export everything from typeDefs and resolvers.
+
+datasources/: If you use Apollo Server's data sources feature, you might have a separate directory for them. Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API.
+
+directives/: For advanced use-cases, GraphQL has a concept called schema directives. If you use custom directives, you might organize them in a separate folder.
+
+errors/: You might have custom GraphQL error handling or specific error classes. Those can be organized here.
+
+scalars/: If you have custom GraphQL scalars (types beyond the basic scalars like String, Int, etc.), they can be placed in a separate directory.
+
+middlewares/: If you're using GraphQL middlewares for things like logging, error handling, or preprocessing, they might be organized here.
+
+utils/: Utility functions that might be used across different resolvers or other parts of the GraphQL code.
+
+subscriptions/: If you're using GraphQL subscriptions for real-time data, there might be specific setup or resolver logic that could be organized separately.
+
+mocks/: If you're mocking your GraphQL server for testing or development purposes, those mock definitions could reside here.

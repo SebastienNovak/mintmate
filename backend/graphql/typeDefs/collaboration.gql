@@ -1,0 +1,17 @@
+type Collaboration {
+    id: ID!
+    role: String!
+    artistId: ID!
+    trackId: ID
+    albumId: ID
+    artist: User!
+    track: Track
+    album: Album
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    collaboration(id: ID!): Collaboration
+    allCollaborations: [Collaboration]
+}

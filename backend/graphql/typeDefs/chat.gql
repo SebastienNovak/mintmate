@@ -1,0 +1,15 @@
+type Chat {
+    id: ID!
+    message: String!
+    senderId: ID!
+    receiverId: ID!
+    sender: User!
+    receiver: User!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    chat(id: ID!): Chat
+    allChats: [Chat]!
+}

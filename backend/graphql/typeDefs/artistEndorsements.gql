@@ -1,0 +1,15 @@
+type ArtistEndorsement {
+    id: ID!
+    brandName: String!
+    product: String
+    description: String
+    endorsementDate: String!
+    artist: ArtistProfile! # Assuming the artist association is with ArtistProfile.
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    artistEndorsement(id: ID!): ArtistEndorsement
+    artistEndorsements: [ArtistEndorsement]
+}

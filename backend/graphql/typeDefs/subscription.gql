@@ -1,0 +1,13 @@
+type Subscription {
+    id: ID!
+    name: String
+    price: Float
+    benefits: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    subscription(id: ID!): Subscription
+    subscriptions: [Subscription!]!
+}

@@ -1,0 +1,23 @@
+type WalletLoginSecurity {
+    id: ID!
+    failedLoginAttempts: Int!
+    lastFailedLogin: String
+    wallet: WalletBasicInfo!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateWalletLoginSecurityInput {
+    failedLoginAttempts: Int!
+    lastFailedLogin: String
+    walletId: ID!
+}
+
+extend type Query {
+    walletLoginSecurity(id: ID!): WalletLoginSecurity
+    walletLoginSecurities: [WalletLoginSecurity!]!
+}
+
+extend type Mutation {
+    createWalletLoginSecurity(input: CreateWalletLoginSecurityInput!): WalletLoginSecurity!
+}

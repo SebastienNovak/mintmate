@@ -1,0 +1,23 @@
+type Voting {
+    id: ID!
+    title: String!
+    description: String
+    deadline: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateVotingInput {
+    title: String!
+    description: String
+    deadline: String
+}
+
+extend type Query {
+    voting(id: ID!): Voting
+    votings: [Voting!]!
+}
+
+extend type Mutation {
+    createVoting(input: CreateVotingInput!): Voting!
+}

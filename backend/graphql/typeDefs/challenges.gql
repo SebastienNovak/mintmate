@@ -1,0 +1,16 @@
+type Challenge {
+    id: ID!
+    title: String!
+    description: String!
+    deadline: String!
+    prize: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    blockchainData(id: ID!): BlockchainData
+    challenge(id: ID!): Challenge
+    allBlockchainData: [BlockchainData]
+    allChallenges: [Challenge]
+}

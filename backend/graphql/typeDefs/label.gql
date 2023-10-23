@@ -1,0 +1,29 @@
+type Label {
+    id: ID!
+    name: String
+    description: String
+    createdAt: String!
+    updatedAt: String!
+    users: [User!]!
+}
+
+extend type Query {
+    label(id: ID!): Label
+    labels: [Label!]!
+}
+
+input CreateLabelInput {
+    name: String
+    description: String
+}
+
+input UpdateLabelInput {
+    name: String
+    description: String
+}
+
+extend type Mutation {
+    createLabel(input: CreateLabelInput!): Label!
+    updateLabel(id: ID!, input: UpdateLabelInput!): Label!
+    deleteLabel(id: ID!): Label!
+}

@@ -1,0 +1,15 @@
+type Royalty {
+    id: ID!
+    percentage: Float!
+    amount: Float!
+    nft: NFT!
+    artist: User!
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    royalty(id: ID!): Royalty
+    royaltiesByArtist(artistId: ID!): [Royalty!]!
+    royaltiesByNFT(nftId: ID!): [Royalty!]!
+}

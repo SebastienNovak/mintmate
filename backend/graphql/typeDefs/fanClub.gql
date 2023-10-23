@@ -1,0 +1,37 @@
+type FanClub {
+    id: ID!
+    name: String
+    description: String
+    exclusiveContentUrl: String
+    artistId: ID!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Mutation {
+    createFanClub(input: CreateFanClubInput!): FanClub!
+    updateFanClub(id: ID!, input: UpdateFanClubInput!): FanClub!
+}
+
+extend type Mutation {
+    createFanClub(input: CreateFanClubInput!): FanClub!
+}
+
+extend type Query {
+    fanClub(id: ID!): FanClub
+    fanClubs: [FanClub!]!
+}
+
+input CreateFanClubInput {
+    name: String
+    description: String
+    exclusiveContentUrl: String
+    artistId: ID!
+}
+
+input UpdateFanClubInput {
+    name: String
+    description: String
+    exclusiveContentUrl: String
+    artistId: ID!
+}

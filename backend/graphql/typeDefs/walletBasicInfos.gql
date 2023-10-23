@@ -1,0 +1,38 @@
+type WalletBasicInfo {
+    id: ID!
+    balance: Float!
+    currency: String
+    address: String
+    publicKey: String
+    isColdStorage: Boolean
+    multisigAddresses: [String]
+    hardwareWalletType: String
+    user: User
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    walletBasicInfo(id: ID!): WalletBasicInfo
+    walletBasicInfos: [WalletBasicInfo!]!
+}
+
+input CreateWalletBasicInfoInput {
+    balance: Float!
+    currency: String
+    address: String
+    publicKey: String
+    isColdStorage: Boolean
+    multisigAddresses: [String]
+    hardwareWalletType: String
+    userId: ID!
+}
+
+extend type Query {
+    walletBasicInfo(id: ID!): WalletBasicInfo
+    walletBasicInfos: [WalletBasicInfo!]!
+}
+
+extend type Mutation {
+    createWalletBasicInfo(input: CreateWalletBasicInfoInput!): WalletBasicInfo!
+}

@@ -1,0 +1,59 @@
+type WalletSecurity {
+  id: ID!
+  privateKeyEncrypted: String!
+  status: WalletStatus!
+  twoFactorEnabled: Boolean!
+  twoFactorSecret: String
+  encryptedPIN: String
+  backupPhraseEncrypted: String
+  securityQuestions: [SecurityQuestion!]
+  securityAnswersEncrypted: [EncryptedAnswer!]
+  fingerprintEnabled: Boolean!
+  wallet: WalletBasicInfo!
+  createdAt: String!
+  updatedAt: String!
+}
+
+enum WalletStatus {
+  active
+  inactive
+  suspended
+}
+
+type SecurityQuestion {
+    question: String!
+}
+
+type EncryptedAnswer {
+    answer: String!
+}
+
+input SecurityQuestionInput {
+    question: String!
+}
+
+input EncryptedAnswerInput {
+    answer: String!
+}
+
+input CreateWalletSecurityInput {
+    privateKeyEncrypted: String!
+    status: WalletStatus!
+    twoFactorEnabled: Boolean!
+    twoFactorSecret: String
+    encryptedPIN: String
+    backupPhraseEncrypted: String
+    securityQuestions: [SecurityQuestionInput!]
+    securityAnswersEncrypted: [EncryptedAnswerInput!]
+    fingerprintEnabled: Boolean!
+    walletId: ID!
+}
+
+extend type Query {
+    walletSecurity(id: ID!): WalletSecurity
+    walletSecurities: [WalletSecurity!]!
+}
+
+extend type Mutation {
+    createWalletSecurity(input: CreateWalletSecurityInput!): WalletSecurity!
+}

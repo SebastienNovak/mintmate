@@ -1,0 +1,50 @@
+type User {
+    id: ID!
+    # ... other properties for the User model ...
+    createdAt: String!
+    updatedAt: String!
+    nfts: [NFT!]!
+}
+
+type NFT {
+    id: ID!
+    # ... other properties for the NFT model ...
+    user: User
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    user(id: ID!): User
+    users: [User!]!
+    nft(id: ID!): NFT
+    nfts: [NFT!]!
+}
+
+input CreateUserInput {
+    # Define the input fields based on the User model properties...
+}
+
+input CreateNFTInput {
+    # Define the input fields based on the NFT model properties...
+    userId: ID
+}
+
+input UpdateUserInput {
+    # Define the input fields for updating a User...
+}
+
+input UpdateNFTInput {
+    # Define the input fields for updating an NFT...
+    userId: ID
+}
+
+extend type Mutation {
+    createUser(input: CreateUserInput!): User!
+    updateUser(id: ID!, input: UpdateUserInput!): User!
+    deleteUser(id: ID!): User!
+    
+    createNFT(input: CreateNFTInput!): NFT!
+    updateNFT(id: ID!, input: UpdateNFTInput!): NFT!
+    deleteNFT(id: ID!): NFT!
+}

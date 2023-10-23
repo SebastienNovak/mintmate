@@ -1,0 +1,31 @@
+type TransactionMeta {
+    id: ID!
+    ipAddress: String
+    userAgent: String
+    transactionNote: String
+    previousStatus: TransactionStatus
+    internalNotes: String
+    attachments: JSON
+    externalReferences: JSON
+    verificationCode: String
+    auditTrail: JSON
+    twoFactorAuthUsed: Boolean
+    sessionId: String
+    geoLocation: JSON
+    digitalSignature: String
+    promoCode: String
+    transaction: Transaction
+    createdAt: String
+    updatedAt: String
+}
+
+enum TransactionStatus {
+    PENDING
+    COMPLETED
+    FAILED
+}
+
+extend type Query {
+    transactionMeta(id: ID!): TransactionMeta
+    transactionMetas: [TransactionMeta!]!
+}

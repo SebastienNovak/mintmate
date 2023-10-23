@@ -1,0 +1,21 @@
+# overwrite: true
+# schema: "/backend/graphql/typeDefs/album.gql"
+# documents: "/absolute/path/to/your/src/graphql/documents/**/*.graphql"
+# generates:
+#   /absolute/path/to/your/src/generated/types.ts:
+#     plugins:
+#       - "typescript"
+#       - "typescript-operations"
+#       - "typescript-resolvers"
+#     config:
+#       contextType: "/absolute/path/to/your/context#MyContext"
+#       useIndexSignature: true
+
+#   /absolute/path/to/your/src/generated/app_models.dart: 
+#     plugins:
+#       flutter-freezed:
+#         camelCasedEnums: true
+
+# hooks:
+#   afterAllFileWrite:
+#     - prettier --write

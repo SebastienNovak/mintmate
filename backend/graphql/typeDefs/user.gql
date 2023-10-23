@@ -1,0 +1,29 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String! # Note: It's generally not a good practice to expose password fields in GraphQL.
+    createdAt: String!
+    updatedAt: String!
+    role: UserRole!
+    sentMessages: [Chat]
+    receivedMessages: [Chat]
+    comments: [Comment]
+    label: Label
+}
+
+type Query {
+    user(id: ID!): User
+    users: [User]
+}
+
+
+type Mutation {
+    createUser(name: String!): User!
+}
+
+enum UserRole {
+    USER
+    ARTIST
+    ADMIN
+}

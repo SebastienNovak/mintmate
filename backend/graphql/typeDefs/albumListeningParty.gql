@@ -1,0 +1,16 @@
+type AlbumListeningParty {
+    id: ID!
+    album: Album!
+    date: String!
+    virtualStageId: Int # Use a more specific type if there’s a corresponding type for virtualStage
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    albumConcept(id: ID!): AlbumConcept
+    albumConcepts: [AlbumConcept]
+    albumListeningParty(id: ID!): AlbumListeningParty
+    albumListeningParties: [AlbumListeningParty!]! # Define albumListeningParties in schema as non-null list with non-null items
+}
+

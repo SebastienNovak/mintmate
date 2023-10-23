@@ -12,7 +12,7 @@ export type TrendingContent = {
     link: string;
 };
 
-type TrendingState = {
+export type TrendingState = {
     trendingContents: TrendingContent[];
     loading: boolean;
     error: string | null;

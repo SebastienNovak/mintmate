@@ -1,0 +1,25 @@
+type FanArt {
+    id: ID!
+    title: String
+    imageUrl: String
+    description: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    fanArt(id: ID!): FanArt
+    fanArts: [FanArt!]!
+}
+
+input CreateFanArtInput {
+    title: String
+    imageUrl: String
+    description: String
+}
+
+input UpdateFanArtInput {
+    title: String
+    imageUrl: String
+    description: String
+}

@@ -1,0 +1,14 @@
+type BehindTheScene {
+    id: ID!
+    artist: User!
+    title: String
+    content: String
+    mediaUrl: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    behindTheScene(id: ID!): BehindTheScene
+    behindTheScenes: [BehindTheScene]
+}

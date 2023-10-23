@@ -1,0 +1,25 @@
+type Workshop {
+    id: ID!
+    title: String!
+    description: String
+    date: String!
+    fee: Float!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateWorkshopInput {
+    title: String!
+    description: String
+    date: String!
+    fee: Float!
+}
+
+extend type Query {
+    workshop(id: ID!): Workshop
+    workshops: [Workshop!]!
+}
+
+extend type Mutation {
+    createWorkshop(input: CreateWorkshopInput!): Workshop!
+}

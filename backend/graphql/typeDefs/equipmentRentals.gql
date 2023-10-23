@@ -1,0 +1,36 @@
+type EquipmentRental {
+    id: ID!
+    itemName: String!
+    description: String
+    dailyRate: Float!
+    availableFrom: String!
+    availableTo: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Mutation {
+    createEquipmentRental(input: CreateEquipmentRentalInput!): EquipmentRental!
+    updateEquipmentRental(id: ID!, input: UpdateEquipmentRentalInput!): EquipmentRental!
+}
+
+extend type Query {
+    equipmentRental(id: ID!): EquipmentRental
+    equipmentRentals: [EquipmentRental!]!
+}
+
+input CreateEquipmentRentalInput {
+    itemName: String!
+    description: String
+    dailyRate: Float!
+    availableFrom: String!
+    availableTo: String!
+}
+
+input UpdateEquipmentRentalInput {
+    itemName: String
+    description: String
+    dailyRate: Float
+    availableFrom: String
+    availableTo: String
+}

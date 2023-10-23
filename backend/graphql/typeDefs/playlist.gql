@@ -1,0 +1,14 @@
+type Playlist {
+    id: ID!
+    name: String!
+    description: String
+    userId: ID!
+    tracks: [Track!]!
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    playlist(id: ID!): Playlist
+    playlists(userId: ID!): [Playlist!]!
+}

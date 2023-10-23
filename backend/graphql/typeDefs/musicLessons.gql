@@ -1,0 +1,19 @@
+type MusicLesson {
+    id: ID!
+    title: String!
+    description: String
+    videoUrl: String!
+    price: Float!
+    artist: User!
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type User {
+    musicLessons: [MusicLesson!]!
+}
+
+extend type Query {
+    musicLesson(id: ID!): MusicLesson
+    musicLessons: [MusicLesson!]!
+}

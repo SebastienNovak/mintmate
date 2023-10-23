@@ -1,0 +1,20 @@
+type Bid {
+    id: ID!
+    user: User!
+    nft: NFT!
+    amount: Float!
+    status: BidStatus!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    bid(id: ID!): Bid
+    bids: [Bid]
+}
+
+enum BidStatus {
+    open
+    accepted
+    rejected
+}

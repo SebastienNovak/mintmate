@@ -1,0 +1,16 @@
+type ArtistBlog {
+    id: ID!
+    user: ArtistProfile!
+    title: String!
+    content: String!
+    imageUrl: String
+    publishedAt: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+  artistBlog(id: ID!): ArtistBlog
+  artistBlogs: [ArtistBlog]
+  # ... Other Queries ...
+}

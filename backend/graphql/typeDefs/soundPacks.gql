@@ -1,0 +1,14 @@
+type SoundPack {
+    id: ID!
+    name: String
+    description: String
+    price: Float
+    sampleUrls: [String!]
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    soundPack(id: ID!): SoundPack
+    soundPacks: [SoundPack!]!
+}

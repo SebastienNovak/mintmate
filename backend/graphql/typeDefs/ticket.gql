@@ -1,0 +1,17 @@
+type Ticket {
+    id: ID!
+    type: String
+    price: Float
+    availableCount: Int
+    purchaseDate: String
+    seatNumber: String
+    soldCount: Int
+    event: Event
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    ticket(id: ID!): Ticket
+    tickets: [Ticket!]!
+}

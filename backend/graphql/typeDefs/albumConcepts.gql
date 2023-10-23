@@ -1,0 +1,20 @@
+type AlbumConcept {
+  id: ID!
+  artistId: Int!
+  title: String
+  description: String
+  images: [String]
+  createdAt: String!
+  updatedAt: String!
+  artist: Artist!
+}
+
+
+type Query {
+  albumConcept(id: ID!): AlbumConcept
+  albumConcepts: [AlbumConcept]
+}
+
+type Artist {
+  id: ID!
+}

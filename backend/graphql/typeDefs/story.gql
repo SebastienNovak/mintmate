@@ -1,0 +1,14 @@
+type Story {
+    id: ID!
+    content: String
+    mediaUrl: String
+    expiresAt: String
+    artist: User
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    story(id: ID!): Story
+    stories: [Story!]!
+}

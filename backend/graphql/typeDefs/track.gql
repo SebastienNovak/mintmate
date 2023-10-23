@@ -1,0 +1,20 @@
+type Track {
+    id: ID!
+    title: String!
+    duration: Int
+    streamUrl: String
+    genre: String
+    audioFile: String
+    featuredArtists: [String]
+    isNFT: Boolean!
+    price: Float
+    album: Album
+    createdAt: String!
+    updatedAt: String!
+    collaborations: [Collaboration]
+}
+
+type Query {
+    track(id: ID!): Track
+    tracks: [Track]
+}

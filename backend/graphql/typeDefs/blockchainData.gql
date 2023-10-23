@@ -1,0 +1,24 @@
+type BlockchainData {
+    id: ID!
+    gasFee: Float
+    gasPrice: Float
+    tokenContractAddress: String
+    exchangeRate: Float
+    escrowStatus: EscrowStatus!
+    failureReason: String
+    transaction: Transaction!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query {
+    blockchainData(id: ID!): BlockchainData
+    allBlockchainData: [BlockchainData]
+}
+
+enum EscrowStatus {
+    not_in_escrow
+    in_escrow
+    released
+    refunded
+}

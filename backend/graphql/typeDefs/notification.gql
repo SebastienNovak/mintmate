@@ -1,0 +1,20 @@
+enum NotificationType {
+    BID
+    PURCHASE
+    EVENT
+    MESSAGE
+}
+
+type Notification {
+    id: ID!
+    content: String!
+    type: NotificationType!
+    userId: ID!
+    createdAt: String!
+    updatedAt: String!
+}
+
+extend type Query {
+    notification(id: ID!): Notification
+    notifications(userId: ID!): [Notification!]!
+}

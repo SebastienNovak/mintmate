@@ -9,6 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      artistId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {         
+          model: 'ArtistProfiles',
+          key: 'id'
+        }
+      },
       date: {
         type: Sequelize.DATE,
         allowNull: false

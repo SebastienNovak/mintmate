@@ -1,0 +1,27 @@
+type ArtistProfile {
+    id: ID!
+    user: User!
+    biography: String
+    genre: String
+    albumsReleased: Int
+    websiteUrl: String
+    socialMediaLinks: JSON
+    profileImage: String
+    discography: String
+    accolades: String
+    imageUrl: String
+    bannerUrl: String
+    createdAt: String!
+    updatedAt: String!
+    blogs: [ArtistBlog!]!
+    collabRequests: [ArtistCollabRequest!]!
+    collaborations: [Collaboration]
+    customizedMerches: [CustomizedMerch]
+}
+
+type Query {
+    artistProfile(id: ID!): ArtistProfile
+    artistProfiles: [ArtistProfile!]
+}
+
+scalar JSON

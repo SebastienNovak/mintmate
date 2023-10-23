@@ -1,0 +1,25 @@
+type VirtualVenue {
+    id: ID!
+    name: String!
+    description: String
+    capacity: Int
+    virtualLink: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateVirtualVenueInput {
+    name: String!
+    description: String
+    capacity: Int
+    virtualLink: String
+}
+
+extend type Query {
+    virtualVenue(id: ID!): VirtualVenue
+    virtualVenues: [VirtualVenue!]!
+}
+
+extend type Mutation {
+    createVirtualVenue(input: CreateVirtualVenueInput!): VirtualVenue!
+}

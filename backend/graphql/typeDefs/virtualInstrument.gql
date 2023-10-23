@@ -1,0 +1,23 @@
+type VirtualInstrument {
+    id: ID!
+    name: String!
+    soundSampleUrl: String
+    price: Float!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input CreateVirtualInstrumentInput {
+    name: String!
+    soundSampleUrl: String
+    price: Float!
+}
+
+extend type Query {
+    virtualInstrument(id: ID!): VirtualInstrument
+    virtualInstruments: [VirtualInstrument!]!
+}
+
+extend type Mutation {
+    createVirtualInstrument(input: CreateVirtualInstrumentInput!): VirtualInstrument!
+}
