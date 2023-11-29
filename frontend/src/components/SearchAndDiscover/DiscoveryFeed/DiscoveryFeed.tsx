@@ -10,7 +10,7 @@ import { AppDispatch } from '../../../store/store';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import './style.scss';
+import './discoveryFeed.scss';
 
 interface DiscoveryFeedProps {
     data: DiscoveryFeedState;
