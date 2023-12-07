@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     }, [dispatch]);
 
     return (
-        // <footer className='footer'>
+        <footer className='footer'>
             <div className="footer-content">
                 <div className="links-container">
                     {viewMode === 'full' && (
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                     <p>&copy; {copyrightYear} Mint Mate</p>
                 </div>
             </div>
-        // </footer>
+        </footer>
     );
 };
 

@@ -8,10 +8,7 @@
     overflow-x: hidden;
 
     .footer-content {
-        display: inline-flex;
-        flex-direction: row;
-        color: white;
-        text-align: center;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1200px; // Limit the width for better alignment
