@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
+
+// "Minty Fresh" Color Palette
+$mint-green: #3eb489;
+$mint-light: #7ce5a6;
+$mint-dark: #006D5B;
+$ice-blue: #E6FFFA;
+$darker-ice-blue: #11b0a8;
+$contrast-white: #FFFFFF;
+$soft-gray: #505050;
+$dark-text: #1A1A1A;
+$light-text: #7D7D7D;
+
+.app {
+  font-family: 'Lato', sans-serif;
+  background-color: $contrast-white;
+  color: $dark-text;
+}
+
+.header-container {
+  background-color: $mint-dark;
+  color: $contrast-white;
+  // Additional styling for the header
+}
+
+.content-container {
+  padding: 20px;
+  // Responsive padding can be added here
+}
+
+.hero {
+  background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-hero-image.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 50px 20px;
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    color: $contrast-white;
+    font-size: 2.5rem; // Adjust font size as needed
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    color: $mint-light;
+    font-size: 1.2rem;
+  }
+
+  .signup-button, .login-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: $mint-green;
+    color: $contrast-white;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($mint-green, 10%);
+    }
+  }
+
+  .login-button {
+    background-color: $contrast-white;
+    color: $mint-dark;
+    border: 2px solid $mint-dark;
+  }
+}
+
+.sections {
+  .trending-content, .discovery-content, .workshops-content, .reviews-content {
+    margin-top: 40px;
+
+    h2 {
+      color: $mint-dark;
+      font-size: 1.8rem;
+    }
+
+    // Specific styles for each section can go here
+  }
+}
+
+.footer-container {
+  background-color: $darker-ice-blue;
+  color: $contrast-white;
+  padding: 20px;
+  text-align: center;
+  // Additional footer styles
+}
+
+// Responsive design adjustments
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 10px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // Additional responsive styles
+}

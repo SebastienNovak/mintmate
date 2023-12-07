@@ -1,88 +1,76 @@
 @import "../../../variables";
 
 .discovery-feed-wrapper {
-    padding: 20px; // Add some general padding around the wrapper
-
-    .filter-sort-controls {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-
-        select {
-            padding: 10px;
-            border: 1px solid $soft-gray;
-            border-radius: 5px;
-        }
-    }
+    padding: 20px;
 
     .discovery-feed {
+        position: relative;
 
         .content-item {
             border-radius: 10px;
-            margin: 0 10px;
-            background-color: $ice-blue;
-            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
 
             a {
                 display: block;
-                padding: 10px;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: darken($ice-blue, 5%);
-                }
-            }
-
-            &:nth-child(odd) {
-                background-color: $mint-dark;
-
-                a:hover {
-                    background-color: darken($peach-pink, 5%);
-                }
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                border-radius: 10px;
-            }
-
-            h3, p, span {
-                margin: 10px 0;
-            }
-
-            h3 {
-                font-size: 1.5rem;
                 color: $dark-text;
-            }
 
-            p {
-                font-size: 1rem;
-                color: $light-text;
-            }
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
 
-            span {
-                font-size: 0.9rem;
-                color: $soft-gray;
+                .details {
+                    padding: 15px;
+                    background-color: rgba($contrast-white, 0.9);
+
+                    h3 {
+                        font-size: 1.5rem;
+                        color: $mint-dark;
+                    }
+
+                    p, span {
+                        font-size: 1rem;
+                        color: $light-text;
+                    }
+                }
             }
 
             .action-btn {
-                display: none; // initially hidden
-
-                &:hover {
-                    display: block;
-                }
+                background-color: $mint-dark;
+                color: $contrast-white;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+                margin-top: 10px;
             }
         }
 
-        .swiper-pagination {
-            // bottom: -10px; // Adjust as necessary to position the bullets below the Swiper
-        }
+        .custom-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
 
-        .swiper {
-            width: 100%;
-            height: 220px;
+            .dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $soft-gray;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &.active {
+                    background-color: $mint-green;
+                }
+            }
         }
     }
 }

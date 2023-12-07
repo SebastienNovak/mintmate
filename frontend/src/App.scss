@@ -11,6 +11,19 @@ $light-text: #7D7D7D;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
 
+// Button mixin for reusability
+@mixin button-styles {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +35,8 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
-    background-color: $darker-ice-blue;
+    background-color: $contrast-white; // White background
+    color: $mint-dark; // Default text color in mint dark for readability
     line-height: 1.6;
 }
 
@@ -30,68 +44,77 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; // Prevent horizontal scroll
+}
+
+
+.header-container {
+  // Styles for your header (navbar) container
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .content-container {
+  // margin-top:;
   width: 100%;
-  // max-width: 1200px;
   margin: 0 auto;
-  // padding: 30px 20px 80px;
-  // padding-top: 55px;
   padding: 60px 30px;
   flex: 1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: $darker-ice-blue;  // Using the darker shade for better contrast
+  background-color: $contrast-white; // White background for content container
+}
+
+.footer-container {
+  // Styles for your footer container
+  width: 100%;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100; // Ensure it's above other elements
+  background-color: $contrast-white; // Or any other color you prefer
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds a subtle shadow for depth
 }
 
 .hero {
-    background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-vibrant-image.jpg');
-    background-size: cover;
-    // padding: 100px 0;
-    padding: 150px 0;
-    text-align: center;
-    margin-bottom: 50px;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
+  background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-vibrant-image.jpg');
+  background-size: cover;
+  padding: 150px 0;
+  text-align: center;
+  // margin-top: -5px;
+  // margin-bottom: 50px;
+  width: 100vw; // Set to viewport width
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; // Adjust for full width
+  margin-right: -50vw;
+  box-sizing: border-box; // Ensure padding doesn't affect width
 
-    h1 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 3rem;
-        font-weight: 600;
-        color: $contrast-white;
-        margin-bottom: 20px;
-        &.aos-animate {
-          animation-name: fade-up;
-          animation-delay: 100ms;
-      }
-    }
+  h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: $contrast-white;
+      margin-bottom: 20px;
+  }
 
-    p {
-        font-size: 1.5rem;
-        color: $contrast-white;
-        margin-bottom: 40px;
-        &.aos-animate {
-          animation-name: fade-up;
-          animation-delay: 300ms;
-      }
-    }
+  p {
+      font-size: 1.5rem;
+      color: $mint-light;
+      margin-bottom: 40px;
+  }
 }
 
 button {
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  z-index: 10;
-
+  @include button-styles;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    // transform: translateY(-3px);
   }
 
   &.signup-button {
@@ -117,11 +140,7 @@ section {
         font-family: 'Poppins', sans-serif;
         font-size: 2rem;
         margin-bottom: 20px;
-        color: $contrast-white;
-    }
-
-    a:hover {
-        text-decoration: underline;
+        color: $mint-green; // Mint green for section headers
     }
 }
 
@@ -134,7 +153,27 @@ section {
 
 .discovery-items-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // This will make items within DiscoveryFeed display next to each other and wrap as needed
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
 
+// Responsive design adjustments
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .content-container {
+      width: calc(100% - 60px); // Adjust width
+      margin: 0 auto;
+      padding: 0 30px; // Adjust padding
+      flex: 1;
+      background-color: $contrast-white;
+  }
+}
