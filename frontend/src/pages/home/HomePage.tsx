@@ -49,15 +49,17 @@ function HomePage() {
             <header className="header-container">
                 <Navbar data={navbarData} />
             </header>
-            <main className="content-container">
-                <Hero />
-                <Suspense fallback={<div>Loading...</div>}>
-                    {renderSections()}
-                </Suspense>
-            </main>
-            <footer className="footer-container">
-                <Footer />
-            </footer>
+            <div className="fixed-container">
+                <main className="content-container">
+                    <Hero />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        {renderSections()}
+                    </Suspense>
+                </main>
+                <footer className="footer-container">
+                    <Footer />
+                </footer>
+            </div>
         </div>
     );
 }

@@ -5,10 +5,11 @@ $mint-green: #3eb489;
 $mint-dark: #006D5B;
 $contrast-white: #FFFFFF;
 $dark-text: #1A1A1A;
-$light-text: #7D7D7D;
+$light-text: #FFFFFF;
 
-html {
+html, body {
   scroll-behavior: smooth;
+  background-color: $contrast-white;
 }
 
 .app {
@@ -17,6 +18,8 @@ html {
   font-family: 'Lato', sans-serif;
   background-color: $contrast-white;
   color: $dark-text;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header-container {
@@ -31,13 +34,21 @@ html {
 
 .content-container {
   width: 100%;
-  height: 100%;
-  // padding-top: 60px; // Equal to the Navbar's height
+  // height: 100%;
+  // margin-top: 50px;
   padding-bottom: 60px; // Equal to the Footer's height
   min-height: calc(100vh - 120px); // Adjust based on Navbar and Footer height
   flex-grow: 1;
   overflow-y: auto;
-  // margin-top: 60px;
+}
+
+.fixed-container {
+  position: fixed;
+  top: 60px; // Height of the header
+  width: 100%;
+  bottom: 0; // Stretch to the bottom of the viewport
+  overflow-y: auto; // Enable vertical scrolling
+  z-index: 5;
 }
 
 .hero {
@@ -94,7 +105,7 @@ html {
 .footer-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   background-color: $dark-text;
   color: $contrast-white;
   text-align: center;

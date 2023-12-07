@@ -1,45 +1,49 @@
 .footer {
-    background-color: #263238; // A dark, elegant background color
+    // background-color: #263238; // A dark, elegant background color
     color: white;
     text-align: center;
     // padding: 30px; // More padding for a better layout
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 
     .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px; // Limit the width for better alignment
-      margin: 0 auto;
+        display: inline-flex;
+        flex-direction: row;
+        color: white;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px; // Limit the width for better alignment
+        margin: 0 auto;
 
-      .links-container {
-        ul {
-          list-style-type: none;
-          display: flex;
-          padding: 0;
+        .links-container {
+            ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
 
-          li {
-            margin: 0 20px; // Space out the links
+            li {
+                margin: 0 20px; // Space out the links
 
-            a {
-              color: white;
-              text-decoration: none;
-              transition: color 0.3s ease;
+                a {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s ease;
 
-              &:hover {
-                color: #26a69a; // Highlight on hover
-              }
+                &:hover {
+                    color: #26a69a; // Highlight on hover
+                }
+                }
             }
-          }
+            }
         }
-      }
 
-      .trademark-container {
-        p {
-          margin: 0;
-          font-size: 1rem; // Slightly larger font size
+        .trademark-container {
+            p {
+            margin: 0;
+            font-size: 1rem; // Slightly larger font size
+            }
         }
-      }
     }
 }

@@ -4,7 +4,7 @@
 // $mint-dark: #006D5B;
 // $ice-blue: #E6FFFA;
 // $darker-ice-blue: #11b0a8;
-// $contrast-white: #FFFFFF;
+$contrast-white: #FFFFFF;
 // $soft-gray: #505050;
 // $dark-text: #1A1A1A;
 // $light-text: #7D7D7D;
@@ -30,15 +30,15 @@
 //     padding: 0;
 // }
 
-// html, body {
-//     height: 100%;
-//     width: 100%;
-//     overflow-x: hidden;
-//     font-family: 'Lato', sans-serif;
-//     background-color: $contrast-white; // White background
-//     color: $mint-dark; // Default text color in mint dark for readability
-//     line-height: 1.6;
-// }
+html, body {
+    height: 100%;
+    width: 100%;
+    // overflow-x: hidden;
+    // font-family: 'Lato', sans-serif;
+    background-color: $contrast-white; // White background
+    // color: $mint-dark; // Default text color in mint dark for readability
+    // line-height: 1.6;
+}
 
 // .app {
 //   min-height: 100vh;
