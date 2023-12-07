@@ -4,12 +4,13 @@ import { RootState } from '../../store/store';
 import Navbar from '../../components/Layout/Navbar/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import './homePage.scss';
+import Hero from '../../components/Layout/Hero/Hero';
 
 // Lazy loaded components
 const Trending = lazy(() => import('../../components/CommunityAndFan/Trending/Trending'));
@@ -55,12 +56,13 @@ function App() {
             </header>
             <main className="content-container">
                 <header className="hero">
-                    <h1>Mint Mate: Your NFT Ticket Hub</h1>
+                    {/* <h1>Mint Mate: Your NFT Ticket Hub</h1>
                     <p>Mint your moment. Own your experience.</p>
                     <button className="signup-button">Sign Up</button>
                     <button className="login-button">
                         <FontAwesomeIcon icon={faUser} /> Log In
-                    </button>
+                    </button> */}
+                    <Hero />
                 </header>
                 <Suspense fallback={<div>Loading...</div>}>
                     {renderSections()}

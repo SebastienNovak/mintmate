@@ -1,0 +1,49 @@
+.hero {
+    background-image: url('/path-to-your-background-image.jpg'); // Replace with your image path
+    background-size: cover;
+    background-position: center;
+    color: #fff; // Adjust text color for readability
+    text-align: center;
+    padding: 60px 20px; // Adequate padding for spacing
+
+    // Responsive design adjustments
+    @media (min-width: 768px) {
+        padding: 120px 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem; // Large, eye-catching title
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            font-size: 4rem;
+        }
+    }
+
+    p {
+        font-size: 1.2rem; // Subtitle or description
+        margin-bottom: 30px;
+        max-width: 600px; // Ensures text is not too wide on larger screens
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    button {
+        background-color: #007bff; // Example button color
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken(#007bff, 10%); // Slightly darken button on hover
+        }
+    }
+}
