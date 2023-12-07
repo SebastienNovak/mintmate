@@ -3,8 +3,14 @@
     background-size: cover;
     background-position: center;
     color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 60px 20px;
+
+    $text-stroke-width: 0.1px; // Width of the text stroke
+    $text-stroke-color: #115a24;
+    -webkit-text-stroke: $text-stroke-width $text-stroke-color;
+    text-stroke: $text-stroke-width $text-stroke-color;
 
     @media (min-width: 768px) {
         padding: 120px 40px;
@@ -53,7 +59,7 @@
     }
 
     .signup-button {
-        background-color: #28a745; // Different color for signup
+        background-color: #2caf4b; // Different color for signup
 
         &:hover {
             background-color: darken(#28a745, 10%);
