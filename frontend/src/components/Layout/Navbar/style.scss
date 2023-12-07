@@ -11,35 +11,34 @@
     z-index: 100;
     padding: 0 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
+
     .logo {
       font-size: 1.8em; // Increased font size for logo
       font-weight: bold;
       display: flex; // Ensures logo is vertically centered
       align-items: center;
     }
-  
+
     ul {
       list-style-type: none;
       display: flex;
       margin: 0;
       padding: 0;
-  
+
       li {
         padding: 0 15px;
         display: flex; // Aligns links vertically
         align-items: center;
-  
+
         a {
           color: white;
           text-decoration: none;
           transition: color 0.3s ease;
-  
+
           &:hover {
             color: #26a69a; // Light teal color for hover
           }
         }
       }
     }
-  }
-  
+}

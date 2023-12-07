@@ -5,28 +5,28 @@
     padding: 25px;
     position: relative;
     width: 100%;
-  
+
     .footer-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       max-width: 1200px; // Max width for content
       margin: 0 auto;
-  
+
       .links-container {
         ul {
           list-style-type: none;
           display: flex;
           padding: 0;
-  
+
           li {
             margin: 0 15px;
-  
+
             a {
               color: white;
               text-decoration: none;
               transition: color 0.3s ease;
-  
+
               &:hover {
                 color: #26a69a; // Light teal color for hover
               }
@@ -34,7 +34,7 @@
           }
         }
       }
-  
+
       .trademark-container {
         p {
           margin: 0;
@@ -42,5 +42,4 @@
         }
       }
     }
-  }
-  
+}

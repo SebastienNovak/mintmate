@@ -6,22 +6,22 @@
     text-align: center;
     padding: 120px 20px;
     margin-top: 60px; // Offset for fixed navbar
-  
+
     h1 {
       font-size: 3.5rem;
       margin-bottom: 30px;
     }
-  
+
     p {
       font-size: 1.8rem;
       margin-bottom: 40px;
     }
-  
+
     .hero-buttons {
       display: flex;
       justify-content: center;
       gap: 15px;
-  
+
       button {
         background-color: #26a69a; // Light teal color
         color: white;
@@ -31,11 +31,10 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-  
+
         &:hover {
           background-color: darken(#26a69a, 15%);
         }
       }
     }
-  }
-  
+}
