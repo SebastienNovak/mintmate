@@ -1,179 +1,179 @@
-// "Minty Fresh" Color Palette
-$mint-green: #3eb489;
-$mint-light: #7ce5a6;
-$mint-dark: #006D5B;
-$ice-blue: #E6FFFA;
-$darker-ice-blue: #11b0a8;
-$contrast-white: #FFFFFF;
-$soft-gray: #505050;
-$dark-text: #1A1A1A;
-$light-text: #7D7D7D;
+// // "Minty Fresh" Color Palette
+// $mint-green: #3eb489;
+// $mint-light: #7ce5a6;
+// $mint-dark: #006D5B;
+// $ice-blue: #E6FFFA;
+// $darker-ice-blue: #11b0a8;
+// $contrast-white: #FFFFFF;
+// $soft-gray: #505050;
+// $dark-text: #1A1A1A;
+// $light-text: #7D7D7D;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
 
-// Button mixin for reusability
-@mixin button-styles {
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  z-index: 10;
-}
+// // Button mixin for reusability
+// @mixin button-styles {
+//   padding: 12px 25px;
+//   border-radius: 30px;
+//   border: none;
+//   font-size: 1rem;
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: transform 0.3s, box-shadow 0.3s;
+//   position: relative;
+//   z-index: 10;
+// }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
-    background-color: $contrast-white; // White background
-    color: $mint-dark; // Default text color in mint dark for readability
-    line-height: 1.6;
-}
+// html, body {
+//     height: 100%;
+//     width: 100%;
+//     overflow-x: hidden;
+//     font-family: 'Lato', sans-serif;
+//     background-color: $contrast-white; // White background
+//     color: $mint-dark; // Default text color in mint dark for readability
+//     line-height: 1.6;
+// }
 
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden; // Prevent horizontal scroll
-}
+// .app {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   overflow-x: hidden; // Prevent horizontal scroll
+// }
 
 
-.header-container {
-  // Styles for your header (navbar) container
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+// .header-container {
+//   // Styles for your header (navbar) container
+//   width: 100%;
+//   position: sticky;
+//   top: 0;
+//   z-index: 10;
+// }
 
-.content-container {
-  // margin-top:;
-  width: 100%;
-  margin: 0 auto;
-  padding: 60px 30px;
-  flex: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: $contrast-white; // White background for content container
-}
+// .content-container {
+//   // margin-top:;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 60px 30px;
+//   flex: 1;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   background-color: $contrast-white; // White background for content container
+// }
 
-.footer-container {
-  // Styles for your footer container
-  width: 100%;
-}
+// .footer-container {
+//   // Styles for your footer container
+//   width: 100%;
+// }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100; // Ensure it's above other elements
-  background-color: $contrast-white; // Or any other color you prefer
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds a subtle shadow for depth
-}
+// .navbar {
+//   position: sticky;
+//   top: 0;
+//   z-index: 100; // Ensure it's above other elements
+//   background-color: $contrast-white; // Or any other color you prefer
+//   width: 100%;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds a subtle shadow for depth
+// }
 
-.hero {
-  background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-vibrant-image.jpg');
-  background-size: cover;
-  padding: 150px 0;
-  text-align: center;
-  // margin-top: -5px;
-  // margin-bottom: 50px;
-  width: 100vw; // Set to viewport width
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw; // Adjust for full width
-  margin-right: -50vw;
-  box-sizing: border-box; // Ensure padding doesn't affect width
+// .hero {
+//   background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-vibrant-image.jpg');
+//   background-size: cover;
+//   padding: 150px 0;
+//   text-align: center;
+//   // margin-top: -5px;
+//   // margin-bottom: 50px;
+//   width: 100vw; // Set to viewport width
+//   position: relative;
+//   left: 50%;
+//   right: 50%;
+//   margin-left: -50vw; // Adjust for full width
+//   margin-right: -50vw;
+//   box-sizing: border-box; // Ensure padding doesn't affect width
 
-  h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
-      font-weight: 600;
-      color: $contrast-white;
-      margin-bottom: 20px;
-  }
+//   h1 {
+//       font-family: 'Poppins', sans-serif;
+//       font-size: 3rem;
+//       font-weight: 600;
+//       color: $contrast-white;
+//       margin-bottom: 20px;
+//   }
 
-  p {
-      font-size: 1.5rem;
-      color: $mint-light;
-      margin-bottom: 40px;
-  }
-}
+//   p {
+//       font-size: 1.5rem;
+//       color: $mint-light;
+//       margin-bottom: 40px;
+//   }
+// }
 
-button {
-  @include button-styles;
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
+// button {
+//   @include button-styles;
+//   &:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+//   }
 
-  &.signup-button {
-      background-color: $mint-green;
-      color: $contrast-white;
-      margin-right: 10px;
-  }
+//   &.signup-button {
+//       background-color: $mint-green;
+//       color: $contrast-white;
+//       margin-right: 10px;
+//   }
 
-  &.login-button {
-      background-color: $contrast-white;
-      color: $mint-dark;
-      border: 2px solid $mint-dark;
-  }
-}
+//   &.login-button {
+//       background-color: $contrast-white;
+//       color: $mint-dark;
+//       border: 2px solid $mint-dark;
+//   }
+// }
 
-section {
-    padding: 30px 0;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+// section {
+//     padding: 30px 0;
+//     margin-bottom: 30px;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-    h2 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: $mint-green; // Mint green for section headers
-    }
-}
+//     h2 {
+//         font-family: 'Poppins', sans-serif;
+//         font-size: 2rem;
+//         margin-bottom: 20px;
+//         color: $mint-green; // Mint green for section headers
+//     }
+// }
 
-// Mobile first
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+// // Mobile first
+// .sections {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 30px;
+// }
 
-.discovery-items-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-}
+// .discovery-items-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//   gap: 15px;
+// }
 
-// Responsive design adjustments
-@media (max-width: 768px) {
-    .hero {
-        padding: 100px 20px;
-        h1 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1rem;
-        }
-    }
+// // Responsive design adjustments
+// @media (max-width: 768px) {
+//     .hero {
+//         padding: 100px 20px;
+//         h1 {
+//             font-size: 2rem;
+//         }
+//         p {
+//             font-size: 1rem;
+//         }
+//     }
 
-    .content-container {
-      width: calc(100% - 60px); // Adjust width
-      margin: 0 auto;
-      padding: 0 30px; // Adjust padding
-      flex: 1;
-      background-color: $contrast-white;
-  }
-}
+//     .content-container {
+//       width: calc(100% - 60px); // Adjust width
+//       margin: 0 auto;
+//       padding: 0 30px; // Adjust padding
+//       flex: 1;
+//       background-color: $contrast-white;
+//   }
+// }

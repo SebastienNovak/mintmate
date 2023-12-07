@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ data }) => {
     }, []);
 
     return (
-        <nav>
+        <nav className='navbar'>
             {/* Links */}
             <ul>
                 {navbarLinks.map(link => (

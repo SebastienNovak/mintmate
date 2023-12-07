@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:wght@400;500&display=swap');
 
-// "Minty Fresh" Color Palette
+// Define your color palette and other variables
 $mint-green: #3eb489;
-// $mint-light: #7ce5a6;
-$mint-light:#ffffff;
 $mint-dark: #006D5B;
-$ice-blue: #E6FFFA;
-$darker-ice-blue: #11b0a8;
 $contrast-white: #FFFFFF;
-$soft-gray: #505050;
 $dark-text: #1A1A1A;
 $light-text: #7D7D7D;
+
+html {
+  scroll-behavior: smooth;
+}
 
 .app {
   font-family: 'Lato', sans-serif;
@@ -19,18 +18,23 @@ $light-text: #7D7D7D;
 }
 
 .header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
   background-color: $mint-dark;
   color: $contrast-white;
-  // Additional styling for the header
 }
 
 .content-container {
-  padding: 20px;
-  // Responsive padding can be added here
+  padding-top: 60px; // Equal to the Navbar's height
+  padding-bottom: 60px; // Equal to the Footer's height
+  min-height: calc(100vh - 120px); // Adjust based on Navbar and Footer height
 }
 
 .hero {
-  background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/path-to-hero-image.jpg');
+  background: linear-gradient(rgba($mint-dark, 0.7), rgba($mint-dark, 0.7)), url('/hero-banner-3.jpg');
   background-size: cover;
   text-align: center;
   padding: 50px 20px;
@@ -38,12 +42,12 @@ $light-text: #7D7D7D;
   h1 {
     font-family: 'Poppins', sans-serif;
     color: $contrast-white;
-    font-size: 2.5rem; // Adjust font size as needed
+    font-size: 2.5rem;
   }
 
   p {
     font-family: 'Poppins', sans-serif;
-    color: $mint-light;
+    color: $light-text;
     font-size: 1.2rem;
   }
 
@@ -77,17 +81,17 @@ $light-text: #7D7D7D;
       color: $mint-dark;
       font-size: 1.8rem;
     }
-
-    // Specific styles for each section can go here
   }
 }
 
 .footer-container {
-  background-color: $darker-ice-blue;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: $dark-text;
   color: $contrast-white;
-  padding: 20px;
   text-align: center;
-  // Additional footer styles
+  padding: 20px;
 }
 
 // Responsive design adjustments
@@ -103,6 +107,4 @@ $light-text: #7D7D7D;
       font-size: 1rem;
     }
   }
-
-  // Additional responsive styles
 }

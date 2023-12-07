@@ -3,22 +3,17 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import Navbar from '../../components/Layout/Navbar/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faUser } from '@fortawesome/free-solid-svg-icons';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import './homePage.scss';
 import Hero from '../../components/Layout/Hero/Hero';
 
-// Lazy loaded components
 const Trending = lazy(() => import('../../components/CommunityAndFan/Trending/Trending'));
 const DiscoveryFeed = lazy(() => import('../../components/SearchAndDiscover/DiscoveryFeed/DiscoveryFeed'));
 const Workshops = lazy(() => import('../../components/EventAndExperience/Workshop/Workshop'));
 const Reviews = lazy(() => import('../../components/Other/ReviewCard/ReviewCard'));
 
-function App() {
+function HomePage() {
     const navbarData = useSelector((state: RootState) => state.navbar);
     const discoveryData = useSelector((state: RootState) => state.discoveryFeed);
     const reviewData = useSelector((state: RootState) => state.reviewCard);
@@ -55,15 +50,7 @@ function App() {
                 <Navbar data={navbarData} />
             </header>
             <main className="content-container">
-                <header className="hero">
-                    {/* <h1>Mint Mate: Your NFT Ticket Hub</h1>
-                    <p>Mint your moment. Own your experience.</p>
-                    <button className="signup-button">Sign Up</button>
-                    <button className="login-button">
-                        <FontAwesomeIcon icon={faUser} /> Log In
-                    </button> */}
-                    <Hero />
-                </header>
+                <Hero />
                 <Suspense fallback={<div>Loading...</div>}>
                     {renderSections()}
                 </Suspense>
@@ -75,4 +62,4 @@ function App() {
     );
 }
 
-export default App;
+export default HomePage;

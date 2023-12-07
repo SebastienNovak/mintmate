@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     setLinks,
-    // toggleViewMode,
     updateCopyrightYear,
     selectFooterLinks,
     selectFooterViewMode,
@@ -39,34 +38,31 @@ const Footer: React.FC = () => {
     }, [dispatch]);
 
     return (
-        <footer>
-    <div className="footer-content">
-        <div className="links-container">
-            {viewMode === 'full' && (
-                <ul>
-                    {links.map(link => (
-                        <li key={link.id}>
-                            <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                {link.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            )}
-            {viewMode === 'compact' && (
-                <div>
-                    {/* Maybe just show the main links or a summarized version */}
+        <footer className='footer'>
+            <div className="footer-content">
+                <div className="links-container">
+                    {viewMode === 'full' && (
+                        <ul>
+                            {links.map(link => (
+                                <li key={link.id}>
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                        {link.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                    {viewMode === 'compact' && (
+                        <div>
+                            {/* Maybe just show the main links or a summarized version */}
+                        </div>
+                    )}
                 </div>
-            )}
-        </div>
-        <div className="trademark-container">
-            {/* <button onClick={() => dispatch(toggleViewMode())}>
-                Toggle View
-            </button> */}
-            <p>&copy; {copyrightYear} Mint Mate</p>
-        </div>
-    </div>
-</footer>
+                <div className="trademark-container">
+                    <p>&copy; {copyrightYear} Mint Mate</p>
+                </div>
+            </div>
+        </footer>
     );
 };
 
