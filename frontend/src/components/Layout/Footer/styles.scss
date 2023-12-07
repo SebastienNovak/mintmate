@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     background-color: #263238; // Dark blue-grey color
     color: white;
     text-align: center;
@@ -10,7 +11,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px; // Max width for content
+      max-width: 1200px;
       margin: 0 auto;
 
       .links-container {
@@ -28,7 +29,7 @@
               transition: color 0.3s ease;
 
               &:hover {
-                color: #26a69a; // Light teal color for hover
+                color: #26a69a;
               }
             }
           }
