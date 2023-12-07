@@ -1,9 +1,8 @@
 .footer {
-    position: relative;
-    background-color: #263238; // Dark blue-grey color
+    background-color: #263238; // A dark, elegant background color
     color: white;
     text-align: center;
-    padding: 25px;
+    // padding: 30px; // More padding for a better layout
     position: relative;
     width: 100%;
 
@@ -11,7 +10,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
+      max-width: 1200px; // Limit the width for better alignment
       margin: 0 auto;
 
       .links-container {
@@ -21,7 +20,7 @@
           padding: 0;
 
           li {
-            margin: 0 15px;
+            margin: 0 20px; // Space out the links
 
             a {
               color: white;
@@ -29,7 +28,7 @@
               transition: color 0.3s ease;
 
               &:hover {
-                color: #26a69a;
+                color: #26a69a; // Highlight on hover
               }
             }
           }
@@ -39,7 +38,7 @@
       .trademark-container {
         p {
           margin: 0;
-          font-size: 0.9rem;
+          font-size: 1rem; // Slightly larger font size
         }
       }
     }
