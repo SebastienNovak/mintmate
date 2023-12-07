@@ -1,39 +1,43 @@
 .hero {
-    background-image: url('/path-to-hero-image.jpg');
+    background-image: url('/hero-banner-3.png'); // Use a high-quality, engaging image
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 120px 20px;
-    margin-top: 60px; // Offset for fixed navbar
+    // padding: 150px 20px; // Increase padding for a more spacious look
+    // margin-top: 60px; // Offset for fixed navbar
 
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 30px;
+      font-size: 4rem; // Increase for more impact
+      margin-bottom: 40px;
+      font-weight: bold; // Add weight for emphasis
     }
 
     p {
-      font-size: 1.8rem;
-      margin-bottom: 40px;
+      font-size: 1.5rem; // Adjust for readability
+      margin-bottom: 50px;
+      max-width: 800px; // Max width for better text alignment
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px; // Increase gap for better separation
 
       button {
         background-color: #26a69a;
         color: white;
         border: none;
-        padding: 12px 25px;
+        padding: 15px 30px; // Increase padding for larger buttons
         font-size: 1.2rem;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: darken(#26a69a, 15%);
+          background-color: darken(#26a69a, 20%);
         }
       }
     }

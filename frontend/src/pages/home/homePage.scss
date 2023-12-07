@@ -12,6 +12,8 @@ html {
 }
 
 .app {
+  display: flexbox;
+  flex-direction: column;
   font-family: 'Lato', sans-serif;
   background-color: $contrast-white;
   color: $dark-text;
@@ -28,10 +30,10 @@ html {
   }
 
 .content-container {
-  padding-top: 60px; // Equal to the Navbar's height
+  // padding-top: 60px; // Equal to the Navbar's height
   padding-bottom: 60px; // Equal to the Footer's height
   min-height: calc(100vh - 120px); // Adjust based on Navbar and Footer height
-  margin-top: 60px;
+  // margin-top: 60px;
 }
 
 .hero {
