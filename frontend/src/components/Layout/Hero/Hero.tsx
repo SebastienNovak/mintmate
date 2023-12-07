@@ -4,7 +4,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
     return (
-        <div className="hero">
+        <div>
             <h1>Mint Mate: Your NFT Ticket Hub</h1>
             <p>Mint your moment. Own your experience.</p>
             <div className="hero-buttons">
