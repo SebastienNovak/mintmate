@@ -11,14 +11,24 @@
       font-size: 4rem; // Larger font size for impact
       margin-bottom: 40px;
       font-weight: bold; // Emphasize the title
+      text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000; // Simulating text border
     }
 
     p {
-      font-size: 1.5rem; // Improved readability
+      font-size: 1.8rem; // Improved readability
       margin-bottom: 50px;
       max-width: 800px; // Better alignment of text
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000; // Simulating text border
     }
 
     .hero-buttons {
@@ -27,7 +37,7 @@
       gap: 20px; // More space between buttons
 
       button {
-        background-color: #26a69a; // Eye-catching button color
+        background-color: #0b4030; // Eye-catching button color
         color: white;
         border: none;
         padding: 15px 30px; // Larger buttons
