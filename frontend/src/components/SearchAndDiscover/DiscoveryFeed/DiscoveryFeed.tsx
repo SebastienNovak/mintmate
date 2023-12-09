@@ -65,7 +65,15 @@ const DiscoveryFeed: React.FC<DiscoveryFeedProps> = ({ data }) => {
                 >
                     {data.content.map(item => (
                         <SwiperSlide key={item.id}>
-                            {/* Content */}
+                            <div className="content-item">
+                                <a href={`/details/${item.id}`}>
+                                    <img src={item.imageUrl} alt={item.title} />
+                                    <h3>{item.title}</h3>
+                                    <p>{item.description}</p>
+                                    <span>{item.type} - {item.date}</span>
+                                    <div className="action-btn">Explore</div>
+                                </a>
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
