@@ -47,7 +47,7 @@ const DiscoveryFeed: React.FC<DiscoveryFeedProps> = ({ data }) => {
                 <Swiper
                     onSwiper={setSwiperInstance}
                     effect="cards"
-                    slidesPerView={3}
+                    slidesPerView={5}
                     spaceBetween={20}
                     mousewheel={{
                         forceToAxis: true,

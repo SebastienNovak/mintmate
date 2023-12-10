@@ -1,76 +1,64 @@
-@import "../../../variables";
+$mint-green: #3eb489;
+$mint-dark: #006D5B;
+$contrast-white: #FFFFFF;
+$dark-text: #1A1A1A;
+$light-text: #FFFFFF;
 
 .discovery-feed-wrapper {
-    padding: 20px;
-
     .discovery-feed {
-        position: relative;
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
 
         .content-item {
+            background-color: white;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
 
             &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                transform: scale(1.05);
             }
 
-            a {
-                display: block;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            h3 {
                 color: $dark-text;
+                margin-top: 10px;
+            }
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                }
-
-                .details {
-                    padding: 15px;
-                    background-color: rgba($contrast-white, 0.9);
-
-                    h3 {
-                        font-size: 1.5rem;
-                        color: $mint-dark;
-                    }
-
-                    p, span {
-                        font-size: 1rem;
-                        color: $light-text;
-                    }
-                }
+            p {
+                color: $light-text;
+                font-size: 0.9rem;
             }
 
             .action-btn {
-                background-color: $mint-dark;
-                color: $contrast-white;
-                padding: 10px;
+                margin-top: 15px;
+                background-color: $mint-green;
+                color: white;
+                padding: 10px 20px;
                 border-radius: 5px;
-                text-align: center;
-                margin-top: 10px;
-            }
-        }
-
-        .custom-pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            .dot {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background-color: $soft-gray;
-                margin: 0 5px;
                 cursor: pointer;
-                transition: background-color 0.3s;
+                transition: background-color 0.3s ease;
 
-                &.active {
-                    background-color: $mint-green;
+                &:hover {
+                    background-color: darken($mint-green, 10%);
                 }
             }
+        }
+    }
+
+    .custom-pagination {
+        .dot {
+            // Styling for pagination dots
         }
     }
 }
