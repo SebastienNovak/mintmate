@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchDiscoveryContent,
@@ -8,10 +8,9 @@ import {
 } from '../../../store/slices/searchAndDiscover/discoveryFeedSlice';
 import { AppDispatch } from '../../../store/store';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import './discoveryFeed.scss';
-import SwiperCore from 'swiper'; // Importing Swiper type
 
 interface DiscoveryFeedProps {
     data: DiscoveryFeedState;
@@ -21,22 +20,12 @@ const DiscoveryFeed: React.FC<DiscoveryFeedProps> = ({ data }) => {
     const dispatch = useDispatch<AppDispatch>();
     const isLoading = useSelector(selectIsLoading);
     const error = useSelector(selectError);
-    const [swiperInstance, setSwiperInstance] = useState<SwiperCore | null>(null);
-    const [activeSlide, setActiveSlide] = useState(0);
+
+    const swiperRef = useRef(null);
 
     useEffect(() => {
         dispatch(fetchDiscoveryContent());
     }, [dispatch]);
-
-    const handleSlideChange = (swiper: SwiperCore) => {
-        setActiveSlide(swiper.realIndex);
-    };
-
-    const goToSlide = (index: number) => {
-        if (swiperInstance) {
-            swiperInstance.slideTo(index);
-        }
-    };
 
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
@@ -45,19 +34,16 @@ const DiscoveryFeed: React.FC<DiscoveryFeedProps> = ({ data }) => {
         <div className="discovery-feed-wrapper">
             <div className="discovery-feed">
                 <Swiper
-                    onSwiper={setSwiperInstance}
+                    ref={swiperRef}
                     effect="cards"
-                    slidesPerView={5}
+                    slidesPerView={3}
                     spaceBetween={20}
-                    mousewheel={{
-                        forceToAxis: true,
-                        releaseOnEdges: true,
-                    }}
+                    mousewheel={true}
                     loop={true}
                     shortSwipes={true}
                     longSwipes={false}
-                    modules={[Mousewheel]}
-                    onSlideChange={handleSlideChange}
+                    modules={[Mousewheel, Pagination]}
+                    pagination={{ clickable: true }}
                     breakpoints={{
                         1024: { slidesPerView: 2, spaceBetween: 20 },
                         600: { slidesPerView: 1, spaceBetween: 10 }
@@ -77,15 +63,6 @@ const DiscoveryFeed: React.FC<DiscoveryFeedProps> = ({ data }) => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="custom-pagination">
-                    {data.content.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`dot ${index === activeSlide ? 'active' : ''}`}
-                            onClick={() => goToSlide(index)}
-                        />
-                    ))}
-                </div>
             </div>
         </div>
     );
